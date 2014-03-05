@@ -629,18 +629,19 @@ select {
    ========================================================================== */
 
 #wrapper {
-	width: 1140px;
+	width: 100%;
 	position: relative;
 	text-align: left;
         margin: 0 auto; 
 }
 
 #headercontainer {
-	width: 1140px;
+	width: 100%;
         background: #2C3E50; 
         position: fixed; 
         top: 0px; 
         margin: 0 auto; 
+        z-index: 1; 
 }
 
 
@@ -2103,7 +2104,7 @@ li span.dots {
 
 
 /* ==========================================================================
-   Non-semantic helper classes from HTML5 Boilerplate
+   Non-semantic helper classes wrom HTML5 Boilerplate
    Please define your styles before this section.
    ========================================================================== */
 
