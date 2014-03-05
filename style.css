@@ -103,7 +103,7 @@ img.wp-smiley,
 
 /* Header */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Merriweather', Georgia, "Times New Roman", Times, serif;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	color: #333;
@@ -629,21 +629,27 @@ select {
    ========================================================================== */
 
 #wrapper {
-	width: 100%;
+	width: 1140px;
 	position: relative;
 	text-align: left;
+        margin: 0 auto; 
 }
 
 #headercontainer {
-	width: 100%;
+	width: 1140px;
+        background: #2C3E50; 
+        position: fixed; 
+        top: 0px; 
+        margin: 0 auto; 
 }
+
 
 .site-header {
 	clear: both;
 	width: 90%;
 	font-size: 16px;
 	font-size: 1rem;
-	max-width: 1200px;
+	max-width: 1140px;
 	margin: 0 auto;
 	padding: 0;
 	position: relative;
@@ -653,6 +659,8 @@ select {
 .site-title h1 {
 	margin-top: 20px;
 	margin-top: 1.25rem;
+        margin-bottom: 32px; 
+        margin-bottom: 2rem; 
 }
 
 .site-title img {
@@ -660,24 +668,32 @@ select {
 }
 
 .site-title a {
-	color: #333;
-	font-size: 64px;
-	font-size: 4rem;
+	color: #fff;
+	font-size: 30px;
+	font-size: 1.875rem;
+        font-weight: 400; 
 	text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 6px; 
+}
+
+.site-description {
+        display: none; 
 }
 
 #bannercontainer {
 	width: 100%;
-	margin-top: 10px;
+	margin-top: 112px;
+        background: #42A2CE; 
 }
 
 .banner {
-	color: #eaeaea;
+	color: #fff;
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1140px;
 	margin: 0 auto;
 	padding: 15px 0;
-	padding: 0.9375rem 0;
+	padding: 2rem 0;
 	min-height: 75px;
 }
 
@@ -686,13 +702,59 @@ select {
 	margin: 1.5rem 0;
 }
 
+.home .banner .textwidget {
+        color: #fff;
+        font-weight: 300;
+        text-align: center;
+}
+
+.home .banner .textwidget p {
+        margin-bottom: 0;
+}
+
+.home .banner .intro-text {
+        font-size: 40px;
+        font-size: 2.5rem;
+        padding: 10px 0 0;
+        padding: 0.625rem 0 0;
+        letter-spacing: 1px;
+        font-weight: 400;
+}
+
+.home .banner .cta-button {
+        background: #2C3E50; 
+        border: solid 3px #2C3E50; 
+        font-size: 16px; 
+        font-size: 1rem;
+        display: inline-block;
+        padding: 16px;
+        padding: 1rem; 
+        margin-top: 16px; 
+        margin-top: 1rem; 
+        color: #fff;
+        text-decoration: none; 
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px; 
+}
+
+.home .banner .cta-button:hover {
+        background: none; 
+        color: #fff; 
+        transition: all 0.5s ease; 
+}
+
+.home .banner .video-text {
+        font-weight: 700;
+        letter-spacing: 2px; 
+}
 .banner h1,
 .banner h2,
 .banner h3,
 .banner h4,
 .banner h5,
 .banner h6 {
-	color: #eaeaea;
+	color: #2C3E50;
  }
 
 .banner h1 {
@@ -719,6 +781,7 @@ select {
 
 #maincontentcontainer {
 	width: 100%;
+        background: #fff; 
 }
 
 .site-content {
@@ -726,7 +789,7 @@ select {
 	width: 90%;
 	font-size: 16px;
 	font-size: 1rem;
-	max-width: 1200px;
+	max-width: 1140px;
 	margin: 0 auto;
 	padding: 32px 0;
 	padding: 2rem 0;
@@ -737,7 +800,7 @@ select {
 
 .home-sidebar {
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1140px;
 	margin: 0 auto;
 	padding-bottom: 32px;
 	padding-bottom: 2rem;
@@ -814,7 +877,7 @@ select {
 }
 
 article.sticky .featured-post {
-	font-family: 'Merriweather', Georgia, "Times New Roman", Times, serif;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	border-top: 4px double #aaa;
@@ -1486,7 +1549,7 @@ form label.error {
 	width: 90%;
 	font-size: 16px;
 	font-size: 1rem;
-	max-width: 1200px;
+	max-width: 1140px;
 	margin: 0 auto;
 	padding: 30px 0 0 0;
 	padding: 1.875rem 0 0 0;
@@ -1522,7 +1585,7 @@ form label.error {
 .smallprint {
 	color: #999;
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1140px;
 }
 
 .smallprint p {
@@ -1762,10 +1825,11 @@ li span.dots {
 .nav-menu {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-style: normal;
-	font-weight: 700;
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-weight: 300;
+	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.5;
+        letter-spacing: 1px; 
 }
 
 .main-navigation ul {
@@ -1819,7 +1883,7 @@ li span.dots {
 .main-small-navigation a, .main-navigation a {
 	display: block;
 	text-decoration: none;
-	color: #333; /* Nav bar link color */
+	color: #fff; /* Nav bar link color */
 }
 
 .main-navigation ul ul {
