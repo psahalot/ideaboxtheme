@@ -1,10 +1,10 @@
 === Tatva ===
-Contributors: ahortin
-Donate link: http://tatvatheme.com
+Contributors: Puneet Sahalot
+Author URI: http://ideaboxcretaions.com
 Tags: black, gray, dark, light, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 3.6
 Tested up to: 3.8
-Stable tag: 1.2.9
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -158,92 +158,6 @@ Tatva utilises the following awesomeness:
 [Font Awesome](http://fortawesome.github.io/Font-Awesome) icon font, which is licensed under SIL Open Font License and MIT License
 [PT Sans font](http://www.google.com/fonts/specimen/PT+Sans), which is licensed under SIL Open Font License 1.1
 [Arvo font](http://www.google.com/fonts/specimen/Arvo), which is licensed under SIL Open Font License 1.1
-
-
-== Changelog ==
-
-= 1.2.9 =
-- Removed Google Analytics script as requested by theme reviewer. This is best left for plugins so please ensure you add one if you were using this feature
-
-= 1.2.8 =
-- Fixed undefined function error on sanitization methods that were introduced due to Options Framework changing to class based code
-
-= 1.2.7 =
-- Updated Font Awesome icon font to v4.0.3
-- Updated Options Framework to v1.7.1
-- Updated Modernizr to v2.7.1
-- Updated comments to be enclosed in <section> rather than <div>. Props @gnotaras
-- Removed pubdate from post/comment meta. Replaced with itemprop
-- Removed invalid attribute from email input box. Props @gnotaras
-
-= 1.2.6 =
-- Updated normalize.css to v2.1.3
-- Updated Font Awesome icon font to v4.0.0 (incl. renaming font classes as per their new naming convention)
-- Removed Font Awesome More font as it's now outdated and no longer needed 
-- Removed minimum-scale & maximum-scale from viewport meta tag
-- Fixed extra period in blockquote style. Props @angeliquejw
-- Fixed 'Skip to main content' accessibility link
-- Added extra theme option to allow social media links to open in another browser tab/window
-- Added extra social media profiles in the theme options for Dribbble, Tumblr, Bitbucket and Foursquare
-- Added check for 'Comment author must fill out name and e-mail' setting when validating comments
-
-= 1.2.5 =
-- Updated normalize.css to v2.1.2
-- Updated Font Awesome icon font to v3.2.1
-- Updated theme short description
-- Updated Post Format templates to contain Author bio
-- Updated _e() references to esc_html_e() to ensure any html added into translation file is neutralised
-- Updated __() references to esc_html__() to ensure any html added into translation file is neutralised
-- Added template for displaying Author bios
-- Added extra use of wp_kses() to ensure only authorised HTML is allowed in translations
-- Added loading of Google Fonts in TinyMCE Editor
-- Added display of Featured Image on Pages, if used
-- Added extra styling to make sure non-breaking text in the title, content, and comments doesn't break layout
-- Removed login_errors filter. This is best left for plugins
-- Removed audio.js since audio functionality is now part of core
-- Removed use of clearfix class as containers will now automatically clear
-
-= 1.2.4 =
-- Updated strings that weren't wrapped in gettext functions for translation purposes
-- Updated Text Domain in Options Framework
-- Added esc_url() when using site URL in header
-- Added sanitation when outputting theme options
-- Fixed bottom margin on blog articles on homepage
-- Fixed text colour in homepage banner
-
-= 1.2.2 =
-- Updated blockquote.pull-right style
-- Updated footer smallprint link colour
-- Fixed display of site name in header area if no Custom Header is specified (ie. no logo image)
-- Removed wp_head hook that removes the WP version number. This is best left for plugins
-- Updated enqueing of scripts. Scripts that are being depended on, will automatically get enqueued so no need to enqueue them manually.
-- Added max-with of 100% to select form fields. Field no longer extends past container in sidebar
-- Fixed padding in main content area when homepage is a blog, so pagination doesn't touch footer
-- Changed fonts so they're called from Google Fonts rather than local
-- Removed unrequired font files from fonts folder
-
-= 1.2.1 =
-- Fixed sidebars
-- Updated description in stylesheet
-- Updated IE filters in btn class 
-- Added extra class when styling frontpage widgets
-
-= 1.2 =
-- Updated Options Framework to version 1.5.2
-- Replaced Museo font with Arvo font
-- Replaced background images
-- Replaced Responsive Grid System with own custom grid
-- Replaced IcoMoon icon font with Font Awesome icon font
-- Added GitHub social icon theme option
-
-= 1.1 =
-- Changed margin and removed padding on .row class and consolidated html to remove extra container elements from templates
-- Removed unnecessary comments from style.css
-- Updated navigation margins in media queries
-- Updated margin, padding & font-size with matching rem values, where missing
-- Updated readme.txt with Getting Started information
-- Removed Google Analytics code from footer and enqueued with other scripts
-- Initial Repository Release
 
 = 1.0 =
 - Initial version
