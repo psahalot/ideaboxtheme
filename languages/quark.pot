@@ -118,17 +118,17 @@ msgid "Primary Menu"
 msgstr ""
 
 #: ../functions.php:116
-msgctxt "PT Sans font: on or off"
+msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr ""
 
 #: ../functions.php:121
-msgctxt "PT Sans font: add new subset (cyrillic)"
+msgctxt "Open Sans font: add new subset (cyrillic)"
 msgid "no-subset"
 msgstr ""
 
 #: ../functions.php:129
-msgctxt "Arvo font: on or off"
+msgctxt "Merriweather font: on or off"
 msgid "on"
 msgstr ""
 
