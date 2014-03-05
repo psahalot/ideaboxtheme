@@ -156,8 +156,8 @@ Tatva utilises the following awesomeness:
 [Normalize.css](https://github.com/necolas/normalize.css), which is licensed under the MIT license
 [jQuery Validation](http://bassistance.de/jquery-plugins/jquery-plugin-validation) which is dual licensed under the MIT license and GPL licenses
 [Font Awesome](http://fortawesome.github.io/Font-Awesome) icon font, which is licensed under SIL Open Font License and MIT License
-[PT Sans font](http://www.google.com/fonts/specimen/PT+Sans), which is licensed under SIL Open Font License 1.1
-[Arvo font](http://www.google.com/fonts/specimen/Arvo), which is licensed under SIL Open Font License 1.1
+[Open Sans font](http://www.google.com/fonts/specimen/PT+Sans), which is licensed under SIL Open Font License 1.1
+[Merriweather font](http://www.google.com/fonts/specimen/Merriweather), which is licensed under SIL Open Font License 1.1
 
 = 1.0 =
 - Initial version

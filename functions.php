@@ -100,7 +100,7 @@ add_action( 'after_setup_theme', 'tatva_setup' );
 /**
  * Returns the Google font stylesheet URL, if available.
  *
- * The use of PT Sans and Arvo by default is localized. For languages that use characters not supported by the fonts, the fonts can be disabled.
+ * The use of Open Sans and Gafata by default is localized. For languages that use characters not supported by the fonts, the fonts can be disabled.
  *
  * @since Tatva 1.2.5
  *
@@ -110,32 +110,32 @@ function tatva_fonts_url() {
 	$fonts_url = '';
 	$subsets = 'latin';
 
-	/* translators: If there are characters in your language that are not supported by PT Sans, translate this to 'off'.
+	/* translators: If there are characters in your language that are not supported by Open Sans, translate this to 'off'.
 	 * Do not translate into your own language.
 	 */
-	$pt_sans = _x( 'on', 'PT Sans font: on or off', 'tatva' );
+	$pt_sans = _x( 'on', 'Open Sans font: on or off', 'tatva' );
 
-	/* translators: To add an additional PT Sans character subset specific to your language, translate this to 'greek', 'cyrillic' or 'vietnamese'.
+	/* translators: To add an additional Open Sans character subset specific to your language, translate this to 'greek', 'cyrillic' or 'vietnamese'.
 	 * Do not translate into your own language.
 	 */
-	$subset = _x( 'no-subset', 'PT Sans font: add new subset (cyrillic)', 'tatva' );
+	$subset = _x( 'no-subset', 'Open Sans font: add new subset (cyrillic)', 'tatva' );
 
 	if ( 'cyrillic' == $subset )
 		$subsets .= ',cyrillic';
 
-	/* translators: If there are characters in your language that are not supported by Arvo, translate this to 'off'.
+	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'.
 	 * Do not translate into your own language.
 	 */
-	$arvo = _x( 'on', 'Arvo font: on or off', 'tatva' );
+	$merriweather = _x( 'on', 'Merriweather font: on or off', 'tatva' );
 
-	if ( 'off' !== $pt_sans || 'off' !== $arvo ) {
+	if ( 'off' !== $pt_sans || 'off' !== $merriweather ) {
 		$font_families = array();
 
 		if ( 'off' !== $pt_sans )
-			$font_families[] = 'PT+Sans:400,400italic,700,700italic';
+			$font_families[] = 'Open+Sans:400,400italic,700,700italic';
 
-		if ( 'off' !== $arvo )
-			$font_families[] = 'Arvo:400';
+		if ( 'off' !== $merriweather )
+			$font_families[] = 'Merriweather:400,300,700';
 
 		$protocol = is_ssl() ? 'https' : 'http';
 		$query_args = array(
