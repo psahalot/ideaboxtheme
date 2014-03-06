@@ -38,3 +38,13 @@
         </div> <!-- /#home-sidebar-container -->
 
 	<?php } ?>
+        <?php if (is_active_sidebar('homepage-testimonial')) { ?>
+        <div id="home-testimonial-container">
+                <div id="home-testimonial" class="home-testimonial-widget row">
+                        <div class="widget-area col grid_12_of_12" role="complementary" >
+                            <?php dynamic_sidebar ('homepage-testimonial'); ?>
+                        </div> <!-- /.widget-area -->
+                </div> <!-- /.home-testimonial -->
+        </div> <!-- /#home-testimonial-container -->
+            
+        <?php } ?>

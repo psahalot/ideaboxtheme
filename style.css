@@ -222,7 +222,7 @@ a {
 }
 
 a:visited { 
-	color: #666;
+	color: #fff;
 }
 
 a:focus { 
@@ -269,7 +269,7 @@ q:after {
 blockquote {
 	border-left: 5px solid #333;
 	margin: 0 0 18px 20px;
-	margin: 0 0 1.125rem 2rem;
+	margin: 0 0 1.8rem 2rem;
 	padding: 0 0 0 16px;
 	padding: 0 0 0 1.6rem;
 }
@@ -729,7 +729,7 @@ select {
         font-weight: 400;
 }
 
-.home .banner .cta-button {
+.cta-button {
         background: #222146; 
         border: solid 3px #222146; 
         font-size: 16px; 
@@ -746,10 +746,14 @@ select {
         letter-spacing: 1px; 
 }
 
-.home .banner .cta-button:hover {
+.cta-button:hover {
         background: none; 
-        color: #fff; 
+        color: #111; 
         transition: all 0.5s ease; 
+}
+
+.home .banner .cta-button:hover {
+        color: #fff; 
 }
 
 .home .banner .video-text {
@@ -781,8 +785,8 @@ select {
         padding: 2rem 0 0;
 }
 .home-sidebar .widget {
-        background: #F1C40F; 
-        color: #fff; 
+        background: #f7f7f7; 
+        color: #444; 
 	padding: 20px 10px;
 	padding: 2rem 1rem;
         margin-bottom: 20px;
@@ -819,35 +823,127 @@ select {
 }
 
 /* Woo testimonials styling for home page */
-
-.home-sidebar .widget_woothemes_testimonials .testimonials-list {
-        position: relative;
+#home-testimonial-container { 
+        background: #f7f7f7;
 }
 
-.home-sidebar .widget_woothemes_testimonials .testimonials-text {
-        padding-right: 120px; 
-        padding-right: 12rem; 
+#home-testimonial {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 2rem 0; 
 }
 
-.home-sidebar .widget_woothemes_testimonials .avatar-link {
-        position: absolute; 
-        right: 10px;
-        top: 0;
+#home-testimonial .testimonials-list {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
 }
 
-.home-sidebar .widget_woothemes_testimonials .avatar-link img {
+#home-testimonial .testimonials-list blockquote {
+        font-size: 30px;
+        font-size: 3rem;
+        font-weight: 300;
+        border-left: none; 
+        padding: 0; 
+        margin-left: 0;     
+}
+
+#home-testimonial .testimonials-list .avatar-link img {
         border-radius: 100px; 
 }
 
-.home-sidebar .widget_woothemes_testimonials .author {
-        float: right; 
+#home-testimonial .testimonials-list .author {
+        display: block;
         font-style: normal; 
 }
+
 #maincontentcontainer {
 	width: 100%;
         background: #fff; 
+        margin-top: 110px; 
+        margin-top: 11rem; 
 }
 
+.home.page #maincontentcontainer {
+        margin-top: 0;
+}
+
+/* Home page products grid */
+.home-product .home-product-title {
+        font-size: 20px;
+        font-size: 2rem; 
+        letter-spacing: 1px; 
+        text-transform: uppercase; 
+        text-align: center;
+        margin-bottom: 5px; 
+        margin-bottom: 0.5rem; 
+}
+
+.home-product {
+        margin-bottom: 30px; 
+        margin-bottom: 3rem; 
+        margin-top: 30px; 
+        margin-top: 3rem; 
+}
+
+.home-product:nth-of-type(3n+1) {
+        margin-left: 0;
+}
+.home-product, 
+.home-product .product-image {
+        position: relative; 
+        overflow: hidden; 
+        max-height: 360px;
+}
+
+.home-product-info {
+        opacity: 0.9;
+        position: absolute;
+        bottom: 6px; 
+        right: 0; 
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -khtml-transition: all 0.5s ease;
+        -moz-transitiokn: all 0.5s ease;    
+}
+
+.home-product-info:hover {
+        opacity: 1;
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -khtml-transition: all 0.5s ease;
+        -moz-transitiokn: all 0.5s ease;
+}
+.home-product-info .edd-submit.button.blue {
+        color: #222146;
+        background: none;
+        border: solid 3px #222146;
+        padding: 10px; 
+        padding: 1rem;
+        border-radius: 0;
+        font-size: 1.6rem;
+        transition: all 0.5s ease;
+        -webki-transition: all 0.5s ease;
+        -khtml-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease; 
+}
+
+.home-product-info .edd-submit.button.blue:hover {
+        background: #222146; 
+        color: #fff; 
+        transition: all 0.5s ease;
+        -webki-transition: all 0.5s ease;
+        -khtml-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease; 
+}
+
+.home-product-info .product-details-link {
+        background: #42A2CE;
+        color: #fff; 
+        float: right; 
+        padding: 10px 15px; 
+        padding: 1rem 1.5rem; 
+}
 .site-content {
 	clear: both;
 	width: 90%;
@@ -869,7 +965,8 @@ select {
 }
 
 .home.page .site-content {
-	padding-bottom: 0;
+	padding: 40px 0 0;
+        padding: 4rem 0 0;
 }
 
 .home.page .site-content article {
@@ -1289,7 +1386,7 @@ article.sticky {
 /* Aside */
 .format-aside .entry-content {
 	margin: 20px 0 18px 0;
-	margin: 2rem 0 1.125rem 0;
+	margin: 2rem 0 1.8rem 0;
 }
 
 .format-aside .entry-content p:last-child {
@@ -1300,9 +1397,9 @@ article.sticky {
 .format-status .entry-content {
 	border-left: 5px solid #ddd;
 	margin: 20px 0 18px 0;
-	margin: 2rem 0 1.125rem 0;
+	margin: 2rem 0 1.8rem 0;
 	padding: 0 0 0 15px;
-	padding: 0 0 0 0.9375rem;
+	padding: 0 0 0 1.5rem;
 }
 
 .format-status .entry-content p {
@@ -2032,13 +2129,13 @@ li span.dots {
         background: #42A2CE;
 }
 
-.ib-blue .home .banner .cta-button {
+.ib-blue .cta-button {
         background: #2C3E50;
         border: solid 3px #2C3E50;
         color: #fff; 
 }
 
-.ib-blue .home .banner .cta-button:hover {
+.ib-blue .cta-button:hover {
         background: none;
         color: #fff;
 }
@@ -2060,13 +2157,13 @@ li span.dots {
         color: #111; 
 }
 
-.ib-red .home .banner .cta-button {
+.ib-red .cta-button {
         background: #DA4545;
         border: solid 3px #DA4545;
         color: #fff; 
 }
 
-.ib-red .home .banner .cta-button:hover {
+.ib-red .cta-button:hover {
         background: none;
         color: #111;
         transition: all 0.5s ease;

@@ -246,7 +246,7 @@ function tatva_widgets_init() {
 	register_sidebar( array(
 			'name' => esc_html__( 'First Front Page Widget Area', 'tatva' ),
 			'id' => 'sidebar-homepage1',
-			'description' => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'tatva' ),
+			'description' => esc_html__( 'Appears on the optional Front Page with a page set as Static Front Page', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widget-title">',
@@ -256,7 +256,7 @@ function tatva_widgets_init() {
 	register_sidebar( array(
 			'name' => esc_html__( 'Second Front Page Widget Area', 'tatva' ),
 			'id' => 'sidebar-homepage2',
-			'description' => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'tatva' ),
+			'description' => esc_html__( 'Appears on the Front Page with a page set as Static Front Page', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widget-title">',
@@ -266,7 +266,7 @@ function tatva_widgets_init() {
 	register_sidebar( array(
 			'name' => esc_html__( 'Third Front Page Widget Area', 'tatva' ),
 			'id' => 'sidebar-homepage3',
-			'description' => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'tatva' ),
+			'description' => esc_html__( 'Appears on the Front Page with a page set as Static Front Page', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widget-title">',
@@ -276,7 +276,17 @@ function tatva_widgets_init() {
 	register_sidebar( array(
 			'name' => esc_html__( 'Fourth Front Page Widget Area', 'tatva' ),
 			'id' => 'sidebar-homepage4',
-			'description' => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'tatva' ),
+			'description' => esc_html__( 'Appears on the Front Page with a page set as Static Front Page', 'tatva' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
+		) );
+        
+        register_sidebar( array(
+			'name' => esc_html__( 'Front Page Testimonial', 'tatva' ),
+			'id' => 'homepage-testimonial',
+			'description' => esc_html__( 'Appears on the Front Page with a page set as Static Front Page', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widget-title">',

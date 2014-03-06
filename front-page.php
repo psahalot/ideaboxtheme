@@ -68,35 +68,25 @@ get_header(); ?>
 			?>
 			<?php if ($products->have_posts()) : $i = 1; ?>
 				<?php while ($products->have_posts()) : $products->the_post(); ?>
-					<div class="col grid_4_of_12 product<?php if($i % 4 == 0) { echo ' last'; } ?>">
+					<div class="col grid_4_of_12 home-product<?php if($i % 3 == 1) { echo ' last'; } ?>">
 						<a href="<?php the_permalink(); ?>">
-							<h3 class="title"><?php the_title(); ?></h3>
+							<h3 class="home-product-title"><?php the_title(); ?></h3>
 						</a>
 						<div class="product-image">
 							<a href="<?php the_permalink(); ?>">
 								<?php the_post_thumbnail('product-image'); ?>
 							</a>
-							<?php if(function_exists('edd_price')) { ?>
-								<div class="product-price">
-									<?php 
-										if(edd_has_variable_prices(get_the_ID())) {
-											// if the download has variable prices, show the first one as a starting price
-											echo 'Starting at: '; edd_price(get_the_ID());
-										} else {
-											edd_price(get_the_ID()); 
-										}
-									?>
-								</div><!--end .product-price-->
-							<?php } ?>
-						</div>
-						<?php if(function_exists('edd_price')) { ?>
-							<div class="product-buttons">
-								<?php if(!edd_has_variable_prices(get_the_ID())) { ?>
-									<?php echo edd_get_purchase_link(get_the_ID(), 'Add to Cart', 'button'); ?>
-								<?php } ?>
-								<a href="<?php the_permalink(); ?>">View Details</a>
-							</div><!--end .product-buttons-->
-						<?php } ?>
+                                                    <div class="home-product-info">
+                                                        <?php if(function_exists('edd_price')) { ?>
+                                                                <div class="product-buttons">
+                                                                        <?php if(!edd_has_variable_prices(get_the_ID())) { ?>
+                                                                                <?php // echo edd_get_purchase_link(get_the_ID(), 'Add to Cart', 'button'); ?>
+                                                                        <?php } ?>
+                                                                        <a href="<?php the_permalink(); ?>" class="product-details-link" title="WordPress theme">View Details</a>
+                                                                </div><!--end .product-buttons-->
+                                                        <?php } ?>
+                                                    </div> <!--end .home-product-info -->
+                                                </div> <!--end .product-image -->
 					</div><!--end .product-->
 					<?php $i+=1; ?>
 				<?php endwhile; ?>
