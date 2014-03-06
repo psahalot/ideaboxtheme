@@ -22,13 +22,13 @@ Text Domain: tatva
 /* Using rem font sizing (Root em’s) with fallback to px for ie8 and below - http://snook.ca/archives/html_and_css/font-size-with-rem */
 body { margin: 0; font-size: 16px; font-size: 1.6rem; line-height: 1.5; }
 
-::-webkit-selection { background: #5784FE; color: #fff; text-shadow: none; }
-::-moz-selection { background: #5784FE; color: #fff; text-shadow: none; }
-::selection { background: #5784FE; color: #fff; text-shadow: none; }
+::-webkit-selection { background: #42A2CE; color: #fff; text-shadow: none; }
+::-moz-selection { background: #42A2CE; color: #fff; text-shadow: none; }
+::selection { background: #42A2CE; color: #fff; text-shadow: none; }
 
-a { color: #333; text-decoration: none; }
-a:visited { color: #666; }
-a:hover { color: #b40101; }
+a { color: #42A2CE; text-decoration: none; }
+a:visited { color: #fff; }
+a:hover { color: #222146; }
 
 menu { padding: 0; }
 
@@ -641,7 +641,7 @@ select {
 
 #headercontainer {
 	width: 100%;
-        background: #DA4545; 
+        background: #222146; 
         position: fixed; 
         top: 0px; 
         margin: 0 auto; 
@@ -688,8 +688,7 @@ select {
 }
 
 #bannercontainer {
-        background: #eee !important; 
-        border-bottom: solid 1px #ddd; 
+        background: #42A2CE !important; 
 	width: 100%;
 	margin-top: 100px;
         margin-top: 10rem;
@@ -712,7 +711,7 @@ select {
 }
 
 .home .banner .textwidget {
-        color: #111;
+        color: #fff;
         font-weight: 300;
         text-align: center;
 }
@@ -731,8 +730,8 @@ select {
 }
 
 .home .banner .cta-button {
-        background: #DA4545; 
-        border: solid 3px #DA4545; 
+        background: #222146; 
+        border: solid 3px #222146; 
         font-size: 16px; 
         font-size: 1.6rem;
         display: inline-block;
@@ -749,7 +748,7 @@ select {
 
 .home .banner .cta-button:hover {
         background: none; 
-        color: #111; 
+        color: #fff; 
         transition: all 0.5s ease; 
 }
 
@@ -777,16 +776,33 @@ select {
 }
 
 #home-sidebar-container {
-        background: #666;
+        background: #fff;
         padding: 20px 0 0;
         padding: 2rem 0 0;
 }
 .home-sidebar .widget {
+        background: #F1C40F; 
         color: #fff; 
-	padding: 10px;
-	padding: 1rem;
+	padding: 20px 10px;
+	padding: 2rem 1rem;
         margin-bottom: 20px;
-        margin-bottom: 2rem; 
+        margin-bottom: 2rem;
+        text-align: center; 
+}
+
+.home-sidebar .widget p {
+        font-size: 16px;
+        font-size: 1.6rem; 
+        font-weight: 300;
+        letter-spacing: 1px; 
+        margin-bottom: 0;
+}
+
+.home-sidebar .widget .fa {
+        font-size: 70px;
+        font-size: 7rem;
+        margin-bottom: 15px; 
+        margin-bottom: 1.5rem;
 }
 
 /* Theme features lis */
@@ -1858,8 +1874,8 @@ li span.dots {
 	text-align: left;
 	float: right;
 	clear: right;
-	margin: 45px 0 0 0;
-	margin: 4.5rem 0 0 0;
+	margin: 35px 0 0 0;
+	margin: 3.5rem 0 0 0;
 }
 
 .main-navigation h1 {
@@ -1918,12 +1934,13 @@ li span.dots {
 }
 
 .main-navigation ul a {
-	padding: 0; /* Padding around each top level menu option (if needed) */
+        padding: 10px; 
+	padding: 1rem; /* Padding around each top level menu option (if needed) */
 }
 
 .main-navigation ul ul a {
-	padding: 0 5px; /* Padding around each dropdown menu option */
-	padding: 0 0.5rem;
+	padding: 10px; /* Padding around each dropdown menu option */
+	padding: 1rem;
 }
 
 .main-small-navigation a, .main-navigation a {
@@ -1939,8 +1956,6 @@ li span.dots {
 	z-index: 99999;
 	line-height: 1.7;
 	background-color: #333; /* Nav bar dropdown background color */
-	-webkit-box-shadow:2px 2px 5px 0px rgba(0, 0, 0, 0.6);
-	box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.6);
 }
 
 .main-navigation ul ul ul {
@@ -1950,14 +1965,14 @@ li span.dots {
 
 .main-navigation ul ul a {
 	color: #fff; /* Nav bar dropdown link color */
-	width: 10.5em; /* Nav bar dropdown width */
+	width: 20rem; /* Nav bar dropdown width */
 }
 
 .main-navigation ul ul li {
 }
 
 .main-navigation li:hover > a {
-	color: #111; /* Nav bar link color on hover */
+	color: #42A2CE; /* Nav bar link color on hover */
 }
 
 .main-navigation ul ul :hover > a {
@@ -1981,7 +1996,7 @@ li span.dots {
 .main-navigation .current-menu-ancestor > a,
 .main-navigation .current_page_item > a,
 .main-navigation .current_page_ancestor > a {
-	color: #111; /* Nav bar link color for current menu item or ancestor */
+	color: #fff; /* Nav bar link color for current menu item or ancestor */
 }
 
 .main-navigation ul .divider {
@@ -2006,6 +2021,64 @@ li span.dots {
 	display: none;
 }
 
+/* ==========================================================================
+   Color Schemes
+   ========================================================================== */
+.ib-blue #headercontainer {
+        background: #2C3E50; 
+} 
+
+.ib-blue #bannercontainer {
+        background: #42A2CE;
+}
+
+.ib-blue .home .banner .cta-button {
+        background: #2C3E50;
+        border: solid 3px #2C3E50;
+        color: #fff; 
+}
+
+.ib-blue .home .banner .cta-button:hover {
+        background: none;
+        color: #fff;
+}
+
+.ib-green #bannercontainer {
+        background: #25d49a; 
+}
+
+.ib-red #headercontainer {
+        background: #DA4545;
+}
+
+.ib-red #bannercontainer {
+        background: #eee;
+}
+
+.ib-red .home .banner .textwidget, 
+.ib-red .home .banner .widget {
+        color: #111; 
+}
+
+.ib-red .home .banner .cta-button {
+        background: #DA4545;
+        border: solid 3px #DA4545;
+        color: #fff; 
+}
+
+.ib-red .home .banner .cta-button:hover {
+        background: none;
+        color: #111;
+        transition: all 0.5s ease;
+}
+
+.ib-red #home-sidebar-container {
+        background: #222; 
+}
+
+.ib-red #home-sidebar-container .home-sidebar .widget {
+        color: #fff; 
+}
 
 /* ==========================================================================
    Media Queries
