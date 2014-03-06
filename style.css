@@ -20,13 +20,13 @@ Text Domain: tatva
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* Using rem font sizing (Root em’s) with fallback to px for ie8 and below - http://snook.ca/archives/html_and_css/font-size-with-rem */
-body { margin: 0; font-size: 16px; font-size: 1rem; line-height: 1.5; }
+body { margin: 0; font-size: 16px; font-size: 1.6rem; line-height: 1.5; }
 
 ::-webkit-selection { background: #5784FE; color: #fff; text-shadow: none; }
 ::-moz-selection { background: #5784FE; color: #fff; text-shadow: none; }
 ::selection { background: #5784FE; color: #fff; text-shadow: none; }
 
-a { color: #333; text-decoration: underline; }
+a { color: #333; text-decoration: none; }
 a:visited { color: #666; }
 a:hover { color: #b40101; }
 
@@ -35,15 +35,19 @@ menu { padding: 0; }
 td { vertical-align: top; }
 
 
+
 /* ==========================================================================
    Basic page styles
    ========================================================================== */
+html {
+	font-size: 62.5%; /* 10px browser default */
+}
 
 body { 
 	margin: 0 auto;
 	padding: 0;
 	font: 16px/1.5 'Open Sans', Helvetica, Arial, sans-serif;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	font-style: normal;
 	font-weight: 400;
 	color: #333;
@@ -103,7 +107,7 @@ img.wp-smiley,
 
 /* Header */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family: "Montserrat", Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	color: #333;
@@ -112,9 +116,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { 
 	margin-bottom: 10px;
-	margin-bottom: 0.625rem;
+	margin-bottom: 1.6rem;
 	font-size: 48px;
-	font-size: 3rem;
+	font-size: 4.8rem;
 	line-height: 1.25;
 }
 
@@ -122,38 +126,38 @@ h2 {
 	margin-bottom: 8px;
 	margin-bottom: .5rem;
 	font-size: 36px;
-	font-size: 2.25rem;
+	font-size: 3.6rem;
 	line-height: 1.1666;
 }
 
 h3 { 
 	margin-bottom: 6px;
-	margin-bottom: 0.375rem;
+	margin-bottom: 0.6rem;
 	font-size: 28px;
-	font-size: 1.75rem;
+	font-size: 2.8rem;
 	line-height: 1.2857;
 }
 
 
 h4 { 
 	margin-bottom: 5px;
-	margin-bottom: 0.3125rem;
+	margin-bottom: 0.5rem;
 	font-size: 24px;
-	font-size: 1.5rem;
+	font-size: 2.4rem;
 	line-height: 1.25;
 }
 
 h5 { 
 	margin-bottom: 5px;
-	margin-bottom: 0.3125rem;
+	margin-bottom: 0.5rem;
 	font-size: 16px;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	line-height: 1.25;
 }
 
 h6 { 
 	margin-bottom: 5px;
-	margin-bottom: 0.3125rem;
+	margin-bottom: 0.5rem;
 	font-size: 14px;
 	font-size: .875rem;
 	line-height: 1.2142;
@@ -164,7 +168,7 @@ hr {
 	border: 0;
 	height: 1px;
 	margin: 24px;
-	margin: 1.5rem;
+	margin: 2.4rem;
 }
 
 ol, ul {
@@ -173,9 +177,9 @@ ol, ul {
 
 p, ol, ul, dl, address {
 	margin: 0 0 24px 0;
-	margin: 0 0 1.5rem 0;
+	margin: 0 0 2.4rem 0;
 	font-size: 16px;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	line-height: 1.5;
 }
 
@@ -223,26 +227,26 @@ a:visited {
 
 a:focus { 
 	outline: thin dotted;
-	color: #2997ab;
+	color: #111;
 }
 
 a:hover, a:active { 
 	outline: 0;
-	color: #2997ab;
+	color: #111;
 }
 
 .alignleft {
 	display: inline;
 	float: left;
 	margin: 0 20px 16px 0;
-	margin: 0 1.25rem 1rem 0;
+	margin: 0 2rem 1.6rem 0;
 }
 
 .alignright {
 	display: inline;
 	float: right;
 	margin: 0 0 16px 20px;
-	margin: 0 0 1rem 1.25rem;
+	margin: 0 0 1.6rem 2rem;
 }
 
 .aligncenter {
@@ -251,7 +255,7 @@ a:hover, a:active {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 16px;
-	margin-bottom: 1rem;
+	margin-bottom: 1.6rem;
 }
 
 blockquote:before,
@@ -265,18 +269,18 @@ q:after {
 blockquote {
 	border-left: 5px solid #333;
 	margin: 0 0 18px 20px;
-	margin: 0 0 1.125rem 1.25rem;
+	margin: 0 0 1.125rem 2rem;
 	padding: 0 0 0 16px;
-	padding: 0 0 0 1rem;
+	padding: 0 0 0 1.6rem;
 }
 
 blockquote.pull-right {
 	border-left: 0 none;
 	border-right: 5px solid #333;
 	margin: 0 20px 18px 0;
-	margin: 0 1.25rem 1.125rem 0;
+	margin: 0 2rem 1.8rem 0;
 	padding: 0 16px 0 0;
-	padding: 0 1rem 0 0;
+	padding: 0 1.6rem 0 0;
 	float: none;
 }
 
@@ -285,7 +289,7 @@ blockquote p {
 	font-style: italic;
 	font-weight: 400;
 	font-size: 24px;
-	font-size: 1.5rem;
+	font-size: 2.4rem;
 	margin-bottom: 0;
 }
 
@@ -302,7 +306,7 @@ blockquote cite {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	line-height: 1.125;
 	color: #999;
 	display: block;
@@ -325,16 +329,16 @@ code, pre {
 	color: #555;
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 	font-size: 12px;
-	font-size: 0.75rem;
+	font-size: 1.2rem;
 	padding: 0 3px 2px;
-	padding: 0 0.1875rem 0.125rem;
+	padding: 0 0.3rem 0.2rem;
 }
 
 code {
 	background-color: #f7f7f9;
 	border: 1px solid #e1e1e8;
 	padding: 2px 4px;
-	padding: 0.125rem 0.25rem;
+	padding: 0.2rem 0.4rem;
 }
 
 abbr,
@@ -363,7 +367,7 @@ sub {
 .wp-caption {
 	max-width: 100%; /* Keep wide captions from overflowing their container. */
 	padding: 4px;
-	padding: 0.25rem;
+	padding: 0.4rem;
 }
 
 .wp-caption .wp-caption-text,
@@ -373,7 +377,7 @@ sub {
 	font-style: italic;
 	font-weight: 400;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	line-height: 1.5;
 	color: #777;
 	text-align: center;
@@ -417,7 +421,7 @@ img.wp-smiley, .rsswidget img {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
-	font-size: 1rem; 
+	font-size: 1.6rem; 
 	line-height: 1.25;
 	margin: 0;
 	font-size: 100%;
@@ -454,11 +458,11 @@ input[type="submit"] {
 	display: inline-block;
 	*display: inline;
 	padding: 8px 14px;
-	padding: 0.5rem 0.875rem;
+	padding: 0.8rem 1.4rem;
 	margin-bottom: 0;
 	*margin-left: .3em;
 	font-size: 16px;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	line-height: 1.25;
 	color: #333333;
 	text-align: center;
@@ -575,9 +579,9 @@ input[type="submit"].btn::-moz-focus-inner {
 .btn-large,
 input[type="submit"].btn-large {
 	padding: 10px 15px;
-	padding: 0.625rem 0.9375rem;
+	padding: 1.6rem 0.9375rem;
 	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 2rem;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -586,7 +590,7 @@ input[type="submit"].btn-large {
 .btn-small,
 input[type="submit"].btn-small {
 	padding: 5px 9px;
-	padding: 0.3125rem 0.5625rem;
+	padding: 0.5rem 0.5625rem;
 	font-size: 13px;
 	font-size: 0.8125rem;
 }
@@ -599,7 +603,7 @@ input[type="url"],
 textarea {
 	font-family: inherit;
 	padding: 8px;
-	padding: 0.5rem;
+	padding: 0.8rem;
 	font-family: inherit;
 	border: 1px solid #ccc;
 	border-radius: 3px;
@@ -618,7 +622,7 @@ select {
 	font-style: normal;
 	font-weight: 700;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	line-height: 2;
 	text-transform: uppercase;
 }
@@ -637,7 +641,7 @@ select {
 
 #headercontainer {
 	width: 100%;
-        background: #2C3E50; 
+        background: #DA4545; 
         position: fixed; 
         top: 0px; 
         margin: 0 auto; 
@@ -649,7 +653,7 @@ select {
 	clear: both;
 	width: 90%;
 	font-size: 16px;
-	font-size: 1rem;
+	font-size: ;
 	max-width: 1140px;
 	margin: 0 auto;
 	padding: 0;
@@ -658,10 +662,11 @@ select {
 }
 
 .site-title h1 {
+        font-family: "Montserrat", Helvetica, Arial, sans-serif;
 	margin-top: 20px;
-	margin-top: 1.25rem;
-        margin-bottom: 32px; 
-        margin-bottom: 2rem; 
+	margin-top: 2rem;
+        margin-bottom: 30px; 
+        margin-bottom: 3rem; 
 }
 
 .site-title img {
@@ -671,7 +676,7 @@ select {
 .site-title a {
 	color: #fff;
 	font-size: 30px;
-	font-size: 1.875rem;
+	font-size: 3rem;
         font-weight: 400; 
 	text-decoration: none;
         text-transform: uppercase;
@@ -683,9 +688,11 @@ select {
 }
 
 #bannercontainer {
+        background: #eee !important; 
+        border-bottom: solid 1px #ddd; 
 	width: 100%;
-	margin-top: 112px;
-        background: #42A2CE; 
+	margin-top: 100px;
+        margin-top: 10rem;
 }
 
 .banner {
@@ -699,12 +706,13 @@ select {
 }
 
 .home .banner .widget {
+        font-family: "Montserrat", Helvetica, Arial, sans-serif;
 	margin: 24px 0;
-	margin: 1.5rem 0;
+	margin: 2.4rem 0;
 }
 
 .home .banner .textwidget {
-        color: #fff;
+        color: #111;
         font-weight: 300;
         text-align: center;
 }
@@ -715,23 +723,23 @@ select {
 
 .home .banner .intro-text {
         font-size: 40px;
-        font-size: 2.5rem;
+        font-size: 4rem;
         padding: 10px 0 0;
-        padding: 0.625rem 0 0;
+        padding: 1rem 0 0;
         letter-spacing: 1px;
         font-weight: 400;
 }
 
 .home .banner .cta-button {
-        background: #2C3E50; 
-        border: solid 3px #2C3E50; 
+        background: #DA4545; 
+        border: solid 3px #DA4545; 
         font-size: 16px; 
-        font-size: 1rem;
+        font-size: 1.6rem;
         display: inline-block;
         padding: 16px;
-        padding: 1rem; 
+        padding: 1.6rem; 
         margin-top: 16px; 
-        margin-top: 1rem; 
+        margin-top: 1.6rem; 
         color: #fff;
         text-decoration: none; 
         text-transform: uppercase;
@@ -741,7 +749,7 @@ select {
 
 .home .banner .cta-button:hover {
         background: none; 
-        color: #fff; 
+        color: #111; 
         transition: all 0.5s ease; 
 }
 
@@ -755,12 +763,12 @@ select {
 .banner h4,
 .banner h5,
 .banner h6 {
-	color: #2C3E50;
+	color: #DA4545;
  }
 
 .banner h1 {
 	font-size: 56px;
-	font-size: 3.50rem;
+	font-size: 5.6rem;
 }
 
 .banner h2 {
@@ -768,18 +776,57 @@ select {
 	font-size: 2rem;
 }
 
-#maincontentcontainer .home-sidebar .widget {
-	background-color: #fcfcfc;
-	border: 1px solid #bbb;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	-moz-background-clip: padding;
-	-webkit-background-clip: padding-box;
-	background-clip: padding-box;
+#home-sidebar-container {
+        background: #666;
+        padding: 20px 0 0;
+        padding: 2rem 0 0;
+}
+.home-sidebar .widget {
+        color: #fff; 
 	padding: 10px;
-	padding: 0.625rem;
+	padding: 1rem;
+        margin-bottom: 20px;
+        margin-bottom: 2rem; 
 }
 
+/* Theme features lis */
+.home-sidebar .home-theme-features {
+        font-size: 18px; 
+        font-size: 1.8rem;
+        font-weight: 300; 
+        line-height: 30px; 
+        margin-bottom: 0; 
+}
+
+.home-sidebar .home-theme-features .fa {
+        margin-right: 10px; 
+}
+
+/* Woo testimonials styling for home page */
+
+.home-sidebar .widget_woothemes_testimonials .testimonials-list {
+        position: relative;
+}
+
+.home-sidebar .widget_woothemes_testimonials .testimonials-text {
+        padding-right: 120px; 
+        padding-right: 12rem; 
+}
+
+.home-sidebar .widget_woothemes_testimonials .avatar-link {
+        position: absolute; 
+        right: 10px;
+        top: 0;
+}
+
+.home-sidebar .widget_woothemes_testimonials .avatar-link img {
+        border-radius: 100px; 
+}
+
+.home-sidebar .widget_woothemes_testimonials .author {
+        float: right; 
+        font-style: normal; 
+}
 #maincontentcontainer {
 	width: 100%;
         background: #fff; 
@@ -789,7 +836,7 @@ select {
 	clear: both;
 	width: 90%;
 	font-size: 16px;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	max-width: 1140px;
 	margin: 0 auto;
 	padding: 32px 0;
@@ -803,8 +850,6 @@ select {
 	width: 90%;
 	max-width: 1140px;
 	margin: 0 auto;
-	padding-bottom: 32px;
-	padding-bottom: 2rem;
 }
 
 .home.page .site-content {
@@ -844,7 +889,7 @@ select {
 }
 
 .social-media-icons a:hover, .social-media-icons a:active { 
-	color: #2997ab;
+	color: #111;
 }
 
 
@@ -861,7 +906,7 @@ select {
 	font-style: italic;
 	font-weight: 400;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	float: right;
 }
 
@@ -874,7 +919,7 @@ select {
 }
 
 .entry-header h1 a:hover {
-	color: #2997ab;
+	color: #111;
 }
 
 article.sticky .featured-post {
@@ -885,10 +930,10 @@ article.sticky .featured-post {
 	border-bottom: 4px double #aaa;
 	color: #777;
 	font-size: 16px;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	line-height: 3;
 	margin-bottom: 24px;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2.4rem;
 	text-align: center;
 }
 
@@ -898,7 +943,7 @@ article.sticky {
 
 .site-content article {
 	margin-bottom: 40px;
-	margin-bottom: 2.5rem;
+	margin-bottom: 4rem;
 	-ms-word-wrap: break-word;
 	-webkit-hyphens: auto;
 	word-wrap: break-word;
@@ -908,9 +953,9 @@ article.sticky {
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 10px;
-	margin-bottom: 0.625rem;
+	margin-bottom: 1rem;
 	padding: 5px 0;
-	padding: 0.3125rem 0;
+	padding: 0.5rem 0;
 	*zoom: 1;
 }
 
@@ -931,12 +976,12 @@ article.sticky {
 }
 
 .header-meta a:hover {
-	color: #2997ab;
+	color: #111;
 }
 
 .entry-content {
 	margin-bottom: 20px;
-	margin-bottom: 1.25rem;
+	margin-bottom: 2rem;
 	*zoom: 1;
 }
 
@@ -951,13 +996,13 @@ article.sticky {
 .post-categories a,
 .post-tags a {
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	background-color: #333;
 	color: #fff;
 	padding: 0 5px;
-	padding: 0 0.3125rem;
+	padding: 0 0.5rem;
 	margin: 0 3px 0 0;
-	margin: 0 0.1875rem 0 0;
+	margin: 0 0.3rem 0 0;
 	display: inline;
 	text-decoration: none;
 }
@@ -969,7 +1014,7 @@ article.sticky {
 
 .post-categories a:hover,
 .post-tags a:hover {
-	background-color: #2997ab;
+	background-color: #111;
 	color: #fff;
 }
 
@@ -991,9 +1036,9 @@ article.sticky {
 	font-style: italic;
 	font-weight: 400;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	margin: 0 20px 0 0;
-	margin: 0 1.25rem 0 0;
+	margin: 0 2rem 0 0;
 }
 
 .page-links {
@@ -1006,7 +1051,7 @@ article.sticky {
 	background-color: #333;
 	border: 1px solid #333;
 	padding: 2px 4px;
-	padding: 0.125rem 0.25rem;
+	padding: 0.2rem 0.4rem;
 	color: #fff;
 }
 
@@ -1020,7 +1065,7 @@ article.sticky {
 }
 
 .page-links a:hover .page-numbers {
-	background-color: #2997ab;
+	background-color: #111;
 	color: #fff;
 }
 
@@ -1035,7 +1080,7 @@ article.sticky {
 .entry-content dl,
 .comment-content dl {
 	margin: 0 24px;
-	margin: 0 1.5rem;
+	margin: 0 2.4rem;
 }
 
 .entry-content dt,
@@ -1050,33 +1095,33 @@ article.sticky {
 .comment-content dd {
 	line-height: 1.5;
 	margin-bottom: 24px;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2.4rem;
 }
 
 .entry-content table,
 .comment-content table {
 	border-bottom: 1px solid #ccc;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	line-height: 2;
 	margin: 0 0 24px;
-	margin: 0 0 1.5rem;
+	margin: 0 0 2.4rem;
 	width: 100%;
 }
 
 .entry-content table caption,
 .comment-content table caption {
 	font-size: 16px;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	margin: 24px 0;
-	margin: 1.5rem 0;
+	margin: 2.4rem 0;
 }
 
 .entry-content td,
 .comment-content td {
 	border-top: 1px solid #ccc;
 	padding: 6px 10px 6px 0;
-	padding: 0.375rem 0.625rem 0.375rem 0;
+	padding: 0.6rem 1.6rem 0.6rem 0;
 }
 
 .entry-content ol,
@@ -1084,7 +1129,7 @@ article.sticky {
 .entry-content ul,
 .comment-content ul {
 	margin: 0 0 24px;
-	margin: 0 0 1.5rem;
+	margin: 0 0 2.4rem;
 	line-height: 1.5;
 	padding: 0;
 }
@@ -1113,22 +1158,22 @@ article.sticky {
 .entry-content li,
 .comment-content li {
 	margin: 0 0 0 28px;
-	margin: 0 0 0 1.75rem;
+	margin: 0 0 0 2.8rem;
 }
 
 /* Author profiles */
 .author .archive-header {
 	margin-bottom: 24px;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2.4rem;
 }
 
 .author-info {
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 	margin: 24px 0;
-	margin: 1.5rem 0;
+	margin: 2.4rem 0;
 	padding: 24px 0;
-	padding: 1.5rem 0;
+	padding: 2.4rem 0;
 	overflow: hidden;
 	*zoom: 1;
 }
@@ -1143,21 +1188,21 @@ article.sticky {
 
 .author-description h2 {
 	font-size: 24px;
-	font-size: 1.5rem;
+	font-size: 2.4rem;
 }
 
 .author-description p {
 	color: #777;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	line-height: 1.5;
 	margin-bottom: 8px;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.8rem;
 }
 
 .author-link {
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 }
 
 .author-link a {
@@ -1173,13 +1218,13 @@ article.sticky {
 .author-link a:hover,
 .author-link a:active { 
 	outline: 0;
-	color: #2997ab;
+	color: #111;
 }
 
 .author.archive .author-info {
 	border-top: 0;
 	margin: 0 0 48px;
-	margin: 0 0 3rem;
+	margin: 0 0 4.8rem;
 }
 
 .author.archive .author-avatar {
@@ -1193,7 +1238,7 @@ article.sticky {
 .author-avatar {
 	float: left;
 	margin-top: 8px;
-	margin-top: 0.5rem;
+	margin-top: 0.8rem;
 }
 
 .author-description {
@@ -1204,7 +1249,7 @@ article.sticky {
 .social-meta a {
 	text-decoration: none;
 	margin-right: 5px;
-	margin-right: 0.3125rem;
+	margin-right: 0.5rem;
 }
 
 
@@ -1214,7 +1259,7 @@ article.sticky {
 
 .entry-media {
 	margin: 0 auto 16px;
-	margin: 0 auto 1rem;
+	margin: 0 auto 1.6rem;
 	max-width: 792px;
 	width: 100%;
 }
@@ -1228,7 +1273,7 @@ article.sticky {
 /* Aside */
 .format-aside .entry-content {
 	margin: 20px 0 18px 0;
-	margin: 1.25rem 0 1.125rem 0;
+	margin: 2rem 0 1.125rem 0;
 }
 
 .format-aside .entry-content p:last-child {
@@ -1239,14 +1284,14 @@ article.sticky {
 .format-status .entry-content {
 	border-left: 5px solid #ddd;
 	margin: 20px 0 18px 0;
-	margin: 1.25rem 0 1.125rem 0;
+	margin: 2rem 0 1.125rem 0;
 	padding: 0 0 0 15px;
 	padding: 0 0 0 0.9375rem;
 }
 
 .format-status .entry-content p {
 	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 2rem;
 	font-style: italic;
 }
 
@@ -1262,7 +1307,7 @@ article.sticky {
 	speak: none;
 	vertical-align: top;
 	font-size: 40px;
-	font-size: 2.5rem;
+	font-size: 4rem;
 	content: "\f10d";
 	color: #ddd;
 	top: -15px;
@@ -1273,20 +1318,20 @@ article.sticky {
 
 .format-quote .entry-content {
 	margin-top: 24px;
-	margin-top: 1.5rem;
+	margin-top: 2.4rem;
 	position: relative;
 }
 
 .format-quote .entry-content blockquote {
 	border: none;
 	margin-left: 40px;
-	margin-left: 2.5rem;
+	margin-left: 4rem;
 }
 
 /* Audio */
 .format-audio .wp-audio-shortcode {
 	margin-bottom: 16px;
-	margin-bottom: 1rem;
+	margin-bottom: 1.6rem;
 }
 
 
@@ -1307,10 +1352,10 @@ article.sticky {
 	font-weight: 400;
 	color: #777;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	line-height: 2;
 	margin-top: 16px;
-	margin-top: 1rem;
+	margin-top: 1.6rem;
 }
 
 
@@ -1320,7 +1365,7 @@ article.sticky {
 
 .comments-title {
 	margin-bottom: 48px;
-	margin-bottom: 3rem;
+	margin-bottom: 4.8rem;
 	font-size: 32px;
 	font-size: 2rem;
 	line-height: 1.5;
@@ -1329,15 +1374,15 @@ article.sticky {
 
 .comments-area article {
 	padding-bottom: 16px;
-	padding-bottom: 1rem;
+	padding-bottom: 1.6rem;
 	margin: 24px 0;
-	margin: 1.5rem 0;
+	margin: 2.4rem 0;
 	border-bottom: 1px solid #ccc;
 }
 
 .comments-area article header {
 	margin: 0 0 24px;
-	margin: 0 0 1.5rem;
+	margin: 0 0 2.4rem;
 	overflow: hidden;
 	position: relative;
 }
@@ -1352,12 +1397,12 @@ article.sticky {
 .comments-area article header time {
 	display: block;
 	margin-left: 84px;
-	margin-left: 5.25rem;
+	margin-left: 8.4rem;
 }
 .comments-area article header cite {
 	font-style: normal;
 	font-size: 16px;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	line-height: 1.5;
 }
 
@@ -1368,7 +1413,7 @@ article.sticky {
 	line-height: 1.8;
 	text-decoration: none;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	color: #5e5e5e;
 }
 
@@ -1394,9 +1439,9 @@ article.sticky {
 	top: 0;
 	right: 0;
 	padding: 8px 14px;
-	padding: 0.5rem 0.875rem;
+	padding: 0.8rem 1.4rem;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	font-weight: normal;
 	color: #fff;
 	background-color: #0088d0;
@@ -1413,16 +1458,16 @@ article.sticky {
 .comments-area li.bypostauthor cite span {
 	position: absolute;
 	margin-left: 6px;
-	margin-left: 0.375rem;
+	margin-left: 0.6rem;
 	padding: 2px 6px;
-	padding: 0.125rem 0.375rem;
+	padding: 0.2rem 0.6rem;
 	font-size: 12px;
-	font-size: 0.75rem;
+	font-size: 1.2rem;
 }
 
 a.comment-reply-link {
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	line-height: 1.8;
 	color: #686868;
 	text-decoration: none;
@@ -1435,13 +1480,13 @@ a.comment-reply-link:hover {
 .commentlist .pingback {
 	line-height: 1.8;
 	margin-bottom: 24px;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2.4rem;
 	padding-bottom: 0;
 }
 
 .commentlist .children {
 	margin-left: 48px;
-	margin-left: 3rem;
+	margin-left: 4.8rem;
 }
 
 .commentlist {
@@ -1451,30 +1496,30 @@ a.comment-reply-link:hover {
 /* Comment form */
 #respond {
 	margin-top: 48px;
-	margin-top: 3rem;
+	margin-top: 4.8rem;
 }
 
 #respond h3#reply-title #cancel-comment-reply-link {
 	margin-left: 12px;
-	margin-left: 0.75rem;
+	margin-left: 1.2rem;
 	font-weight: normal;
 	font-size: 12px;
-	font-size: 0.75rem;
+	font-size: 1.2rem;
 }
 
 #respond form {
 	margin: 24px 0 32px 0;
-	margin: 1.5rem 0 2rem 0;
+	margin: 2.4rem 0 2rem 0;
 }
 
 #respond form p {
 	margin: 12px 0;
-	margin: 0.75rem 0;
+	margin: 1.2rem 0;
 }
 
 #respond form p.logged-in-as {
 	margin-bottom: 24px;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2.4rem;
 }
 
 #respond form label {
@@ -1488,10 +1533,10 @@ a.comment-reply-link:hover {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	font-size: 16px;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	line-height: 1.8;
 	padding: 8px;
-	padding: 0.5rem;
+	padding: 0.8rem;
 	width: 100%;
 }
 
@@ -1502,7 +1547,7 @@ a.comment-reply-link:hover {
 #respond form p.form-allowed-tags {
 	margin: 0;
 	font-size: 12px;
-	font-size: 0.75rem;
+	font-size: 1.2rem;
 	line-height: 1.5;
 	color: #5e5e5e;
 }
@@ -1524,11 +1569,11 @@ form label.error {
 	font-weight: 700;
 	display:block;
 	padding: 0 10px 0 10px;
-	padding: 0 0.625rem 0 0.625rem;
+	padding: 0 1.6rem 0 1.6rem;
 	margin: 5px 0 5px 0;
-	margin: 0.3125rem 0 0.3125rem 0;
+	margin: 0.5rem 0 0.5rem 0;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	border-left: 4px solid #bb0504;
 	display: none;
 }
@@ -1549,11 +1594,11 @@ form label.error {
 	clear: both;
 	width: 90%;
 	font-size: 16px;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	max-width: 1140px;
 	margin: 0 auto;
 	padding: 30px 0 0 0;
-	padding: 1.875rem 0 0 0;
+	padding: 3rem 0 0 0;
 	color: #999;
 }
 
@@ -1570,7 +1615,7 @@ form label.error {
 }
 
 .site-footer a:hover { 
-	color: #2997ab;
+	color: #111;
 }
 
 .site-footer a:focus { 
@@ -1580,7 +1625,7 @@ form label.error {
 
 .site-footer .widget-area .widget {
 	margin-bottom: 16px;
-	margin-bottom: 1rem;
+	margin-bottom: 1.6rem;
 }
 
 .smallprint {
@@ -1591,7 +1636,7 @@ form label.error {
 
 .smallprint p {
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 }
 
 .smallprint a { 
@@ -1603,7 +1648,7 @@ form label.error {
 }
 
 .smallprint a:hover { 
-	color: #2997ab;
+	color: #111;
 }
 
 
@@ -1624,38 +1669,38 @@ form label.error {
 	hyphens: auto;
 	word-wrap:break-word;
 	word-break: break-word;
-	margin-bottom: 48px;
-	margin-bottom: 3rem;
+	margin-bottom: 20px;
+	margin-bottom: 2rem;
 }
 
 .widget select {
 	margin-left: 1px;
-	margin-left: 0.0625rem;
+	margin-left: 0.1rem;
 }
 
 .widget-area .widget ul ul {
 	margin-left: 12px;
-	margin-left: 0.75rem;
+	margin-left: 1.2rem;
 }
 
 .widget_rss li {
 	margin: 12px 0;
-	margin: 0.75rem;
+	margin: 1.2rem;
 }
 
 .widget_recent_entries .post-date,
 .widget_rss .rss-date {
 	font-size: 12px;
-	font-size: 0.75rem;
+	font-size: 1.2rem;
 	margin-left: 12px;
-	margin-left: 0.75rem;
+	margin-left: 1.2rem;
 }
 
 #wp-calendar {
 	margin: 0;
 	width: 100%;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	line-height: 2;
 }
 
@@ -1689,14 +1734,14 @@ form label.error {
 
 #wp-calendar #next {
 	padding-right: 24px;
-	padding-right: 1.5rem;
+	padding-right: 2.4rem;
 	text-align: right;
 }
 
 .widget_search label {
 	display: block;
 	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 1.4rem;
 	line-height: 1.5;
 }
 
@@ -1722,7 +1767,7 @@ form label.error {
 
 #nav-above {
 	padding: 24px;
-	padding: 1.5rem;
+	padding: 2.4rem;
 }
 
 #nav-above {
@@ -1756,7 +1801,7 @@ form label.error {
 .nav-single + .comments-area,
 #comment-nav-above {
 	margin: 48px 48px 48px 0;
-	margin: 3rem 3rem 3rem 0;
+	margin: 4.8rem 4.8rem 4.8rem 0;
 }
 
 ul.page-numbers {
@@ -1769,7 +1814,7 @@ ul.page-numbers {
 li a.page-numbers,
 li span.page-numbers {
 	padding: 5px;
-	padding: 0.3125rem;
+	padding: 0.5rem;
 	border: 1px solid #333;
 	text-decoration: none;
 }
@@ -1779,14 +1824,14 @@ li a:visited.page-numbers {
 }
 
 li a:hover.page-numbers {
-	background-color: #2997ab;
+	background-color: #111;
 	color: #fff;
 }
 
 li a:hover.prev,
 li a:hover.next {
 	background-color: transparent;
-	color: #2997ab;
+	color: #111;
 }
 
 .page-numbers li {
@@ -1814,7 +1859,7 @@ li span.dots {
 	float: right;
 	clear: right;
 	margin: 45px 0 0 0;
-	margin: 2.8125rem 0 0 0;
+	margin: 4.5rem 0 0 0;
 }
 
 .main-navigation h1 {
@@ -1824,11 +1869,11 @@ li span.dots {
 }
 
 .nav-menu {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family: "Montserrat", Helvetica, Arial, sans-serif;
 	font-style: normal;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 16px;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	line-height: 1.5;
         letter-spacing: 1px; 
 }
@@ -1843,7 +1888,7 @@ li span.dots {
 	float: left;
 	position: relative;
 	margin: 0 0 0 20px; /* Margin on the left side of each top level menu item (since it's floated right) */
-	margin: 0 0 0 1.25rem;
+	margin: 0 0 0 2rem;
 }
 
 .main-navigation ul ul li {
@@ -1878,7 +1923,7 @@ li span.dots {
 
 .main-navigation ul ul a {
 	padding: 0 5px; /* Padding around each dropdown menu option */
-	padding: 0 0.3125rem;
+	padding: 0 0.5rem;
 }
 
 .main-small-navigation a, .main-navigation a {
@@ -1912,7 +1957,7 @@ li span.dots {
 }
 
 .main-navigation li:hover > a {
-	color: #2997ab; /* Nav bar link color on hover */
+	color: #111; /* Nav bar link color on hover */
 }
 
 .main-navigation ul ul :hover > a {
@@ -1921,7 +1966,7 @@ li span.dots {
 }
 
 .main-navigation ul ul a:hover {
-	color: #2997ab; /* Nav bar dropdown link color on hover */
+	color: #111; /* Nav bar dropdown link color on hover */
 }
 
 .main-navigation ul li:hover > ul {
@@ -1936,7 +1981,7 @@ li span.dots {
 .main-navigation .current-menu-ancestor > a,
 .main-navigation .current_page_item > a,
 .main-navigation .current_page_ancestor > a {
-	color: #2997ab; /* Nav bar link color for current menu item or ancestor */
+	color: #111; /* Nav bar link color for current menu item or ancestor */
 }
 
 .main-navigation ul .divider {
@@ -1978,7 +2023,7 @@ li span.dots {
 	}
 	.banner h2 {
 		font-size: 24px;
-		font-size: 1.5rem;
+		font-size: 2.4rem;
 	}
 }
 
@@ -2050,7 +2095,7 @@ li span.dots {
 	}
 	.main-small-navigation .nav-menu ul {
 		padding-left: 16px;
-		padding-left: 1rem;
+		padding-left: 1.6rem;
 	}
 }
 

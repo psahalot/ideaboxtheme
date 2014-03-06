@@ -126,16 +126,16 @@ function tatva_fonts_url() {
 	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'.
 	 * Do not translate into your own language.
 	 */
-	$oswald = _x( 'on', 'Oswald font: on or off', 'tatva' );
+	$montserrat = _x( 'on', 'Montserrat font: on or off', 'tatva' );
 
-	if ( 'off' !== $pt_sans || 'off' !== $oswald ) {
+	if ( 'off' !== $pt_sans || 'off' !== $montserrat ) {
 		$font_families = array();
 
 		if ( 'off' !== $pt_sans )
 			$font_families[] = 'Open+Sans:400,300,400italic,700,700italic';
 
-		if ( 'off' !== $oswald )
-			$font_families[] = 'Oswald:400,300,700';
+		if ( 'off' !== $montserrat )
+			$font_families[] = 'Montserrat:400,700';
 
 		$protocol = is_ssl() ? 'https' : 'http';
 		$query_args = array(

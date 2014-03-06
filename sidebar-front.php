@@ -18,6 +18,7 @@
 
 	// If there's one or more one active sidebars, create a row and add them
 	if ( $footerSidebars > 0 ) { ?>
+        <div id="home-sidebar-container">
 		<div id="secondary" class="home-sidebar row">
 			<?php
 			// Work out the container class name based on the number of active front page sidebars
@@ -34,5 +35,6 @@
 				<?php }
 			} ?>
 		</div> <!-- /#secondary.row -->
+        </div> <!-- /#home-sidebar-container -->
 
 	<?php } ?>
