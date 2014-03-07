@@ -6,6 +6,7 @@
  * @since Tatva 1.0
  */
 ?>
+<?php if(is_active_sidebar('sidebar-main') || is_active_sidebar( 'sidebar-blog' ) || is_active_sidebar( 'sidebar-single' ) || is_active_sidebar( 'sidebar-page' )) { ?>
 	<div class="col grid_4_of_12">
 
 		<div id="secondary" class="sidebar" role="complementary">
@@ -32,3 +33,4 @@
 		</div> <!-- /#secondary.widget-area -->
 
 	</div> <!-- /.col.grid_4_of_12 -->
+<?php } ?>

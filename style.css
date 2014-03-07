@@ -345,13 +345,27 @@ td {
 }
 
 code, pre {
-	border-radius: 3px;
+        background: #f2f2f2;
+        border: 1px solid #e6e6e6;
 	color: #555;
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 	font-size: 12px;
 	font-size: 1.2rem;
-	padding: 0 3px 2px;
-	padding: 0 0.3rem 0.2rem;
+	padding: 10px;
+	padding: 1rem;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        border-radius: 3px;
+}
+
+pre {
+        white-space: pre;
+        word-wrap: normal;
+        overflow-x: scroll;
+        line-height: 1.3;
+        margin: 1em 0;
 }
 
 code {
@@ -983,7 +997,16 @@ select {
 	position: relative;
 }
 
-    
+/* change site content width for pages without sidebar */
+
+.container-slim .site-content {
+        width: 68%;
+}
+
+.container-slim .site-content .grid_8_of_12 {
+        width: 100%; 
+}
+
 .home-sidebar {
 	width: 90%;
 	max-width: 1140px;
@@ -1153,6 +1176,13 @@ article.sticky {
 	text-decoration: none;
 }
 
+.post-tags a {
+        background: #eee;
+        padding: 3px 10px;
+        padding: 0.3rem 1rem; 
+        border: solid 1px #ddd;
+        color: #999;
+}
 
 .entry-header address,
 .comment-content address {
@@ -1227,9 +1257,9 @@ article.sticky {
 	margin-bottom: 2.4rem;
 }
 
+
 .entry-content table,
 .comment-content table {
-	border-bottom: 1px solid #ccc;
 	font-size: 14px;
 	font-size: 1.4rem;
 	line-height: 2;
@@ -1247,10 +1277,19 @@ article.sticky {
 }
 
 .entry-content td,
+.entry-content th
 .comment-content td {
-	border-top: 1px solid #ccc;
-	padding: 6px 10px 6px 0;
-	padding: 0.6rem 1.6rem 0.6rem 0;
+	border: 1px solid #ddd;
+	padding: 8px;
+	padding: 0.8rem;
+}
+
+.entry-content table th {
+          background: #eee;
+          font-weight: bold;
+          padding: 10px; 
+          padding: 1rem; 
+          border: solid 1px #ddd; 
 }
 
 .entry-content ol,
@@ -1288,6 +1327,8 @@ article.sticky {
 .comment-content li {
 	margin: 0 0 0 28px;
 	margin: 0 0 0 2.8rem;
+        padding-top: 10px; 
+        padding-top: 1rem; 
 }
 
 /* Author profiles */
@@ -2299,6 +2340,10 @@ li span.dots {
 	.social-media-icons li {
 		margin: 0.1em 0.5em 0 0;
 	}
+        .container-slim .site-content {
+                width: 90%; 
+        }
+        
 }
 
 /*  Go full Width at less than 650px */

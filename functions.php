@@ -181,6 +181,23 @@ function tatva_class_names($classes) {
         if(is_front_page()) {
             $classes[] = 'tatva-front-page';
         }
+        
+        // check if right sidebar is active, if yes, return container wide body class
+        if(!is_front_page() && is_active_sidebar('sidebar-main') ) { 
+            $classes[] = 'container-wide';
+        }
+        elseif (( is_home() || is_archive() ) && is_active_sidebar( 'sidebar-blog' )) {
+            $classes[] = 'container-wide-blog';
+        }
+        elseif ( is_single() && is_active_sidebar( 'sidebar-single' ) ) {
+            $classes[] = 'container-wide-single';
+        }
+        elseif ( !is_front_page() && is_page() && is_active_sidebar( 'sidebar-page' ) ) {
+            $classes[] = 'container-wide-page';
+        }
+        elseif (!is_front_page()) {
+            $classes[]= 'container-slim';
+        }
 	// return the $classes array
 	return $classes;
 }
@@ -234,8 +251,8 @@ function tatva_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name' => esc_html__( 'First Front Page Banner Widget', 'tatva' ),
-			'id' => 'frontpage-banner1',
+			'name' => esc_html__( 'Home Featured Left', 'tatva' ),
+			'id' => 'home-featured1',
 			'description' => esc_html__( 'Appears in the banner area on the Front Page', 'tatva' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
@@ -244,8 +261,8 @@ function tatva_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name' => esc_html__( 'Second Front Page Banner Widget', 'tatva' ),
-			'id' => 'frontpage-banner2',
+			'name' => esc_html__( 'Home Featured Right', 'tatva' ),
+			'id' => 'home-featured2',
 			'description' => esc_html__( 'Appears in the banner area on the Front Page', 'tatva' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
@@ -254,7 +271,7 @@ function tatva_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name' => esc_html__( 'First Front Page Widget Area', 'tatva' ),
+			'name' => esc_html__( 'Home #1', 'tatva' ),
 			'id' => 'sidebar-homepage1',
 			'description' => esc_html__( 'Appears on the optional Front Page with a page set as Static Front Page', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -264,7 +281,7 @@ function tatva_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name' => esc_html__( 'Second Front Page Widget Area', 'tatva' ),
+			'name' => esc_html__( 'Home #2', 'tatva' ),
 			'id' => 'sidebar-homepage2',
 			'description' => esc_html__( 'Appears on the Front Page with a page set as Static Front Page', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -274,7 +291,7 @@ function tatva_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name' => esc_html__( 'Third Front Page Widget Area', 'tatva' ),
+			'name' => esc_html__( 'Home #3', 'tatva' ),
 			'id' => 'sidebar-homepage3',
 			'description' => esc_html__( 'Appears on the Front Page with a page set as Static Front Page', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -284,7 +301,7 @@ function tatva_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name' => esc_html__( 'Fourth Front Page Widget Area', 'tatva' ),
+			'name' => esc_html__( 'Home #4', 'tatva' ),
 			'id' => 'sidebar-homepage4',
 			'description' => esc_html__( 'Appears on the Front Page with a page set as Static Front Page', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -294,7 +311,7 @@ function tatva_widgets_init() {
 		) );
         
         register_sidebar( array(
-			'name' => esc_html__( 'Front Page Testimonial', 'tatva' ),
+			'name' => esc_html__( 'Home Testimonial', 'tatva' ),
 			'id' => 'homepage-testimonial',
 			'description' => esc_html__( 'Appears on the Front Page with a page set as Static Front Page', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -304,7 +321,7 @@ function tatva_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name' => esc_html__( 'First Footer Widget Area', 'tatva' ),
+			'name' => esc_html__( 'Footer #1', 'tatva' ),
 			'id' => 'sidebar-footer1',
 			'description' => esc_html__( 'Appears in the footer sidebar', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -314,7 +331,7 @@ function tatva_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name' => esc_html__( 'Second Footer Widget Area', 'tatva' ),
+			'name' => esc_html__( 'Footer #2', 'tatva' ),
 			'id' => 'sidebar-footer2',
 			'description' => esc_html__( 'Appears in the footer sidebar', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -324,7 +341,7 @@ function tatva_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name' => esc_html__( 'Third Footer Widget Area', 'tatva' ),
+			'name' => esc_html__( 'Footer #3', 'tatva' ),
 			'id' => 'sidebar-footer3',
 			'description' => esc_html__( 'Appears in the footer sidebar', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -334,7 +351,7 @@ function tatva_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name' => esc_html__( 'Fourth Footer Widget Area', 'tatva' ),
+			'name' => esc_html__( 'Footer #4', 'tatva' ),
 			'id' => 'sidebar-footer4',
 			'description' => esc_html__( 'Appears in the footer sidebar', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',

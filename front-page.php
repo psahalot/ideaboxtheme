@@ -22,7 +22,7 @@ get_header(); ?>
 				// Count how many banner sidebars are active so we can work out how many containers we need
 				$bannerSidebars = 0;
 				for ( $x=1; $x<=2; $x++ ) {
-					if ( is_active_sidebar( 'frontpage-banner' . $x ) ) {
+					if ( is_active_sidebar( 'home-featured' . $x ) ) {
 						$bannerSidebars++;
 					}
 				}
@@ -35,10 +35,10 @@ get_header(); ?>
 
 					// Display the active banner sidebars
 					for ( $x=1; $x<=2; $x++ ) {
-						if ( is_active_sidebar( 'frontpage-banner'. $x ) ) { ?>
+						if ( is_active_sidebar( 'home-featured'. $x ) ) { ?>
 							<div class="col <?php echo $containerClass?>">
 								<div class="widget-area" role="complementary">
-									<?php dynamic_sidebar( 'frontpage-banner'. $x ); ?>
+									<?php dynamic_sidebar( 'home-featured'. $x ); ?>
 								</div> <!-- /.widget-area -->
 							</div> <!-- /.col.<?php echo $containerClass?> -->
 						<?php }
