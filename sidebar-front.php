@@ -28,7 +28,7 @@
 			for ( $x=1; $x<=4; $x++ ) {
 				if ( is_active_sidebar( 'sidebar-homepage'.  $x ) ) { ?>
 					<div class="col <?php echo $containerClass?>">
-						<div class="widget-area" role="complementary">
+						<div class="home-widgets" role="complementary">
 							<?php dynamic_sidebar( 'sidebar-homepage'.  $x ); ?>
 						</div> <!-- #widget-area -->
 					</div> <!-- /.col.<?php echo $containerClass?> -->
@@ -41,7 +41,7 @@
         <?php if (is_active_sidebar('homepage-testimonial')) { ?>
         <div id="home-testimonial-container">
                 <div id="home-testimonial" class="home-testimonial-widget row">
-                        <div class="widget-area col grid_12_of_12" role="complementary" >
+                        <div class="home-testi-widget col grid_12_of_12" role="complementary" >
                             <?php dynamic_sidebar ('homepage-testimonial'); ?>
                         </div> <!-- /.widget-area -->
                 </div> <!-- /.home-testimonial -->

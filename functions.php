@@ -48,7 +48,7 @@ if ( ! function_exists( 'tatva_setup' ) ) {
 		add_theme_support( 'post-thumbnails' );
 
 		// Create an extra image size for the Post featured image
-		add_image_size( 'post_feature_full_width', 792, 300, true );
+		add_image_size( 'post_feature_full_width', 680, 300, true );
 
 		// This theme uses wp_nav_menu() in one location
 		register_nav_menus( array(
@@ -174,6 +174,16 @@ function tatva_mce_css( $mce_css ) {
 }
 add_filter( 'mce_css', 'tatva_mce_css' );
 
+// Add specific CSS class by filter
+add_filter('body_class','tatva_class_names');
+function tatva_class_names($classes) {
+	
+        if(is_front_page()) {
+            $classes[] = 'tatva-front-page';
+        }
+	// return the $classes array
+	return $classes;
+}
 
 /**
  * Register widgetized areas

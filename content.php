@@ -8,11 +8,7 @@
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
-			<div class="featured-post">
-				<?php esc_html_e( 'Featured post', 'tatva' ); ?>
-			</div>
-		<?php } ?>
+		
 		<header class="entry-header">
 			<?php if ( is_single() ) { ?>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -30,7 +26,7 @@
 			<?php } ?>
 		</header> <!-- /.entry-header -->
 
-		<?php if ( is_search() ) { // Only display Excerpts for Search ?>
+		<?php if ( is_search() || is_home() || is_archive()) { // Only display Excerpts for Search ?>
 			<div class="entry-summary">
 				<?php the_excerpt(); ?>
 			</div> <!-- /.entry-summary -->

@@ -14,6 +14,7 @@ get_header(); ?>
 
 		<div class="col grid_12_of_12">
 
+                    <div class="main-content">
 			<article id="post-0" class="post error404 no-results not-found">
 				<header class="entry-header">
 					<h1 class="entry-title"><i class="fa fa-frown-o fa-lg"></i> <?php esc_html_e( 'Uh Oh! This is somewhat embarrassing!', 'tatva' ); ?></h1>
@@ -24,6 +25,8 @@ get_header(); ?>
 				</div><!-- /.entry-content -->
 			</article><!-- /#post -->
 
+                    </div> <!-- /.main-content -->
+                    
 		</div> <!-- /.col.grid_12_of_12 -->
 
 	</div> <!-- /#primary.site-content.row -->

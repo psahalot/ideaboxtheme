@@ -20,6 +20,8 @@ get_header(); ?>
 
 		<div class="col grid_8_of_12">
 
+                    <div class="main-content">
+                        
 			<?php if ( have_posts() ) : ?>
 
 				<?php // Start the Loop ?>
@@ -35,6 +37,8 @@ get_header(); ?>
 
 			<?php endif; // end have_posts() check ?>
 
+                    </div>  <!-- /.main-content -->
+                    
 		</div> <!-- /.col.grid_8_of_12 -->
 		<?php get_sidebar(); ?>
 

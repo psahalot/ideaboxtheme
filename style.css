@@ -22,12 +22,12 @@ Text Domain: tatva
 /* Using rem font sizing (Root em’s) with fallback to px for ie8 and below - http://snook.ca/archives/html_and_css/font-size-with-rem */
 body { margin: 0; font-size: 16px; font-size: 1.6rem; line-height: 1.5; }
 
-::-webkit-selection { background: #42A2CE; color: #fff; text-shadow: none; }
-::-moz-selection { background: #42A2CE; color: #fff; text-shadow: none; }
-::selection { background: #42A2CE; color: #fff; text-shadow: none; }
+::-webkit-selection { background: #009cee; color: #fff; text-shadow: none; }
+::-moz-selection { background: #009cee; color: #fff; text-shadow: none; }
+::selection { background: #009cee; color: #fff; text-shadow: none; }
 
-a { color: #42A2CE; text-decoration: none; }
-a:visited { color: #fff; }
+a { color: #009cee; text-decoration: none; }
+/* a:visited { color: #42A2CE; } */
 a:hover { color: #222146; }
 
 menu { padding: 0; }
@@ -39,6 +39,7 @@ td { vertical-align: top; }
 /* ==========================================================================
    Basic page styles
    ========================================================================== */
+
 html {
 	font-size: 62.5%; /* 10px browser default */
 }
@@ -115,51 +116,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { 
-	margin-bottom: 10px;
-	margin-bottom: 1.6rem;
-	font-size: 48px;
-	font-size: 4.8rem;
-	line-height: 1.25;
+	margin-bottom: 15px;
+	margin-bottom: 1.5rem;
+	font-size: 36px;
+	font-size: 3.6rem;
+	line-height: 1.5;
 }
 
 h2 { 
-	margin-bottom: 8px;
-	margin-bottom: .5rem;
-	font-size: 36px;
-	font-size: 3.6rem;
+	margin-bottom: 15px;
+	margin-bottom: 1.5rem;
+        margin-top: 15px;
+        margin-top: 1.5rem; 
+	font-size: 28px;
+	font-size: 2.8rem;
 	line-height: 1.1666;
 }
 
 h3 { 
-	margin-bottom: 6px;
-	margin-bottom: 0.6rem;
-	font-size: 28px;
-	font-size: 2.8rem;
+	margin-bottom: 15px;
+	margin-bottom: 1.5rem;
+        margin-top: 15px;
+        margin-top: 1.5rem; 
+	font-size: 24px;
+	font-size: 2.4rem;
 	line-height: 1.2857;
 }
 
 
 h4 { 
-	margin-bottom: 5px;
-	margin-bottom: 0.5rem;
-	font-size: 24px;
-	font-size: 2.4rem;
+	margin-bottom: 15px;
+	margin-bottom: 1.5rem;
+        margin-top: 15px;
+        margin-top: 1.5rem; 
+	font-size: 18px;
+	font-size: 1.8rem;
 	line-height: 1.25;
 }
 
 h5 { 
-	margin-bottom: 5px;
-	margin-bottom: 0.5rem;
+	margin-bottom: 15px;
+	margin-bottom: 1.5rem;
+        margin-top: 15px;
+        margin-top: 1.5rem;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.25;
 }
 
 h6 { 
-	margin-bottom: 5px;
-	margin-bottom: 0.5rem;
+	margin-bottom: 15px;
+	margin-bottom: 1.5rem;
+        margin-top: 15px;
+        margin-top: 1.5rem; 
 	font-size: 14px;
-	font-size: .875rem;
+	font-size: 1.4rem;
 	line-height: 1.2142;
 }
 
@@ -180,7 +191,7 @@ p, ol, ul, dl, address {
 	margin: 0 0 2.4rem 0;
 	font-size: 16px;
 	font-size: 1.6rem;
-	line-height: 1.5;
+	line-height: 1.7;
 }
 
 ul ul, ul ol, ol ol, ol ul {
@@ -217,13 +228,15 @@ ins {
 }
 
 a { 
-	color: #333;
+	color: #009cee;
 	outline: none;
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -khtml-transition: all 0.5s ease;
+        -moz-transitiokn: all 0.5s ease;    
+        
 }
 
-a:visited { 
-	color: #fff;
-}
 
 a:focus { 
 	outline: thin dotted;
@@ -232,7 +245,11 @@ a:focus {
 
 a:hover, a:active { 
 	outline: 0;
-	color: #111;
+	color: #222146;
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -khtml-transition: all 0.5s ease;
+        -moz-transitiokn: all 0.5s ease;    
 }
 
 .alignleft {
@@ -267,7 +284,7 @@ q:after {
 }
 
 blockquote {
-	border-left: 5px solid #333;
+	border-left: 5px solid #666;
 	margin: 0 0 18px 20px;
 	margin: 0 0 1.8rem 2rem;
 	padding: 0 0 0 16px;
@@ -276,7 +293,7 @@ blockquote {
 
 blockquote.pull-right {
 	border-left: 0 none;
-	border-right: 5px solid #333;
+	border-right: 5px solid #666;
 	margin: 0 20px 18px 0;
 	margin: 0 2rem 1.8rem 0;
 	padding: 0 16px 0 0;
@@ -286,11 +303,12 @@ blockquote.pull-right {
 
 blockquote p {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-style: italic;
-	font-weight: 400;
-	font-size: 24px;
-	font-size: 2.4rem;
-	margin-bottom: 0;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	font-size: 1.6rem;
+        margin-bottom: 10px; 
+	margin-bottom: 1rem;
 }
 
 blockquote.pull-right p, blockquote.pull-right small {
@@ -304,12 +322,14 @@ blockquote cite:before {
 blockquote cite {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-style: normal;
-	font-weight: 400;
+	font-weight: 300;
 	font-size: 14px;
 	font-size: 1.4rem;
 	line-height: 1.125;
 	color: #999;
 	display: block;
+        padding-top: 10px; 
+        padding-top: 1rem; 
 }
 
 table {
@@ -859,14 +879,18 @@ select {
 
 #maincontentcontainer {
 	width: 100%;
-        background: #fff; 
-        margin-top: 110px; 
-        margin-top: 11rem; 
+        margin-top: 140px; 
+        margin-top: 14rem;
+        margin-bottom: 40px;
+        margin-bottom: 4rem;
 }
 
-.home.page #maincontentcontainer {
-        margin-top: 0;
+.tatva-front-page #maincontentcontainer {
+        background: #fff; 
+        margin-top: 0px; 
+        margin-bottom: 0;
 }
+
 
 /* Home page products grid */
 .home-product .home-product-title {
@@ -945,31 +969,32 @@ select {
         padding: 1rem 1.5rem; 
 }
 .site-content {
+        background: #fff; 
 	clear: both;
 	width: 90%;
 	font-size: 16px;
 	font-size: 1.6rem;
 	max-width: 1140px;
 	margin: 0 auto;
-	padding: 32px 0;
-	padding: 2rem 0;
+	padding: 10px 0;
+	padding: 1rem 0;
 	color: #333;
 	line-height: 1.5;
 	position: relative;
 }
 
+    
 .home-sidebar {
 	width: 90%;
 	max-width: 1140px;
 	margin: 0 auto;
 }
 
-.home.page .site-content {
-	padding: 40px 0 0;
-        padding: 4rem 0 0;
+.tatva-front-page .site-content {
+	padding:0; 
 }
 
-.home.page .site-content article {
+.tatva-front-page .site-content article {
 	margin-bottom: 0;
 }
 
@@ -1010,25 +1035,31 @@ select {
    Main Content
    ========================================================================== */
 
+.main-content {
+        padding: 20px 30px 20px 40px; 
+        padding: 2rem 3rem 2rem 4rem; 
+}
+
 .entry-meta {
 	clear: both;
 }
 
 .comments-link {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-style: italic;
-	font-weight: 400;
 	font-size: 14px;
 	font-size: 1.4rem;
 	float: right;
 }
 
+.entry-header .entry-title,
 .entry-header .entry-title a {
 	text-decoration: none;
+        color: #009cee;
+        margin-bottom: 16px;
+        margin-bottom: 1.6rem; 
 }
 
 .entry-header h1 a:visited {
-	color: #333;
+	color: #009cee;
 }
 
 .entry-header h1 a:hover {
@@ -1036,11 +1067,8 @@ select {
 }
 
 article.sticky .featured-post {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	border-top: 4px double #aaa;
-	border-bottom: 4px double #aaa;
 	color: #777;
 	font-size: 16px;
 	font-size: 1.6rem;
@@ -1051,7 +1079,12 @@ article.sticky .featured-post {
 }
 
 article.sticky {
-	border-bottom: 4px double #aaa;
+        margin-top: 10px; 
+        margin-top: 1rem;  
+        padding: 20px 30px; 
+	padding: 2rem 3rem;
+        background: #f7f7f7;
+        border: solid 1px #f1f1f1;
 }
 
 .site-content article {
@@ -1065,10 +1098,11 @@ article.sticky {
 .header-meta {
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
-	margin-bottom: 10px;
-	margin-bottom: 1rem;
-	padding: 5px 0;
-	padding: 0.5rem 0;
+        color: #999;
+	margin-bottom: 20px;
+	margin-bottom: 2rem;
+	padding: 15px 0;
+	padding: 1.5rem 0;
 	*zoom: 1;
 }
 
@@ -1081,15 +1115,18 @@ article.sticky {
 .header-meta:after { clear: both; }
 
 .header-meta a {
+        color: #999;
 	text-decoration:none;
+        letter-spacing: 1px; 
+        font-weight: 300; 
 }
 
 .header-meta a:visited {
-	color: #333;
+	color: #999;
 }
 
 .header-meta a:hover {
-	color: #111;
+	color: #333;
 }
 
 .entry-content {
@@ -1110,31 +1147,16 @@ article.sticky {
 .post-tags a {
 	font-size: 14px;
 	font-size: 1.4rem;
-	background-color: #333;
-	color: #fff;
-	padding: 0 5px;
-	padding: 0 0.5rem;
 	margin: 0 3px 0 0;
 	margin: 0 0.3rem 0 0;
 	display: inline;
 	text-decoration: none;
 }
 
-.post-categories a:visited,
-.post-tags a:visited {
-	color: #fff;
-}
-
-.post-categories a:hover,
-.post-tags a:hover {
-	background-color: #111;
-	color: #fff;
-}
 
 .entry-header address,
 .comment-content address {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-style: italic;
+        font-style: normal; 
 	font-weight: 400;
 	display: block;
 }
@@ -1145,9 +1167,6 @@ article.sticky {
 
 .entry-header time,
 .entry-header address {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-style: italic;
-	font-weight: 400;
 	font-size: 14px;
 	font-size: 1.4rem;
 	margin: 0 20px 0 0;
@@ -1157,28 +1176,25 @@ article.sticky {
 .page-links {
 	clear: both;
 	line-height: 1.75;
-	color: #333;
+	color: #999;
+        padding: 2rem 0;
+        border-top: solid 1px #ddd; 
 }
 
 .page-links .page-numbers {
-	background-color: #333;
-	border: 1px solid #333;
-	padding: 2px 4px;
-	padding: 0.2rem 0.4rem;
-	color: #fff;
+	padding: 5px 20px;
+	padding: 0.5rem 2rem;
+	border: 2px solid #222146;
+        margin-left: 10px; 
+        margin-left: 1rem; 
 }
 
 .page-links a {
 	text-decoration: none;
 }
 
-.page-links a .page-numbers {
-	background-color: transparent;
-	color: #333;
-}
-
 .page-links a:hover .page-numbers {
-	background-color: #111;
+	background-color: #222146;
 	color: #fff;
 }
 
@@ -1700,6 +1716,7 @@ form label.error {
    ========================================================================== */
 
 #footercontainer {
+        background: #42A2CE !important;
 	width: 100%;	
 }
 
@@ -1712,23 +1729,23 @@ form label.error {
 	margin: 0 auto;
 	padding: 30px 0 0 0;
 	padding: 3rem 0 0 0;
-	color: #999;
+	color: #fff;
 }
 
 .site-footer h3 { 
-	color: #ccc;
+	color: #fff;
 }
 
 .site-footer a { 
-	color: #999;
+	color: #fff;
 }
 
 .site-footer a:visited { 
-	color: #999;
+	color: #fff;
 }
 
 .site-footer a:hover { 
-	color: #111;
+	color: #eee;
 }
 
 .site-footer a:focus { 
@@ -1742,7 +1759,7 @@ form label.error {
 }
 
 .smallprint {
-	color: #999;
+	color: #fff;
 	width: 90%;
 	max-width: 1140px;
 }
@@ -1753,25 +1770,69 @@ form label.error {
 }
 
 .smallprint a { 
-	color: #555;
+	color: #fff;
 }
 
 .smallprint a:visited { 
-	color: #555;
+	color: #fff;
 }
 
 .smallprint a:hover { 
-	color: #111;
+	color: #eee;
 }
 
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar {
+        padding: 40px 30px 0 0;
+        padding: 4rem 3rem 0 0;
+}
+
+.sidebar a {
+        color: #009cee;
+}
+
+.sidebar .widget {
+        margin-bottom: 50px;
+        margin-bottom: 5rem; 
+}
+
+.sidebar .widget li {
+        padding-bottom: 10px;
+        padding-bottom: 1rem;
+        margin-bottom: 10px;
+        margin-bottom: 1rem; 
+        border-bottom: solid 1px #efefef;
+}
+
+.sidebar .widget ul {
+        margin: 0;
+        padding-left:0; 
+        list-style: none outside none;
+}
 
 /* ==========================================================================
    Widgets
    ========================================================================== */
 
+.widget-area .widget-title,
+.sidebar .widget-title {
+        margin-bottom: 20px; 
+        margin-bottom: 2rem;
+        font-size: 15px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-family: "Opens Sans", sans-serif;
+        text-transform: uppercase;
+}
+
 .widget-area ul {
 	list-style: none outside none;
 	padding-left: 0;
+        margin: 0; 
 }
 
 .widget-area .widget {
@@ -1876,6 +1937,8 @@ form label.error {
 	clear: both;
 	line-height: 2;
 	overflow: hidden;
+        padding: 30px 0px; 
+        padding: 3rem 0rem; 
 }
 
 #nav-above {
@@ -1926,25 +1989,22 @@ ul.page-numbers {
 
 li a.page-numbers,
 li span.page-numbers {
-	padding: 5px;
-	padding: 0.5rem;
-	border: 1px solid #333;
+	padding: 5px 20px;
+	padding: 0.5rem 2rem;
+	border: 2px solid #222146;
 	text-decoration: none;
 }
 
-li a:visited.page-numbers {
-	color: #333;
-}
 
 li a:hover.page-numbers {
-	background-color: #111;
+	background-color: #222146;
 	color: #fff;
 }
 
 li a:hover.prev,
 li a:hover.next {
 	background-color: transparent;
-	color: #111;
+	color: #222146;
 }
 
 .page-numbers li {
@@ -1952,7 +2012,7 @@ li a:hover.next {
 }
 
 li span.current {
-	background-color: #333;
+	background-color: #222146;
 	color: #fff;
 }
 

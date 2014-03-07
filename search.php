@@ -15,6 +15,9 @@ get_header(); ?>
 
 		<div class="col grid_8_of_12">
 
+                    <div class="main-content">
+                        
+
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
@@ -33,6 +36,8 @@ get_header(); ?>
 				<?php get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found ?>
 
 			<?php endif; // end have_posts() check ?>
+                        
+                    </div> <!-- /.main-content -->
 
 		</div> <!-- /.col.grid_8_of_12 -->
 		<?php get_sidebar(); ?>
