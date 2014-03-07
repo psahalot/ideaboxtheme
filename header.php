@@ -66,7 +66,24 @@
 
 			<div class="col grid_7_of_12">
 				<div class="social-media-icons">
-					<?php echo tatva_get_social_media(); ?>
+					<?php // echo tatva_get_social_media(); ?>
+                                    <?php if ( has_nav_menu( 'social' ) ) { 
+                                                wp_nav_menu(
+                                                        array(
+                                                                'theme_location'  => 'social',
+                                                                'container'       => 'div',
+                                                                'container_id'    => 'menu-social',
+                                                                'container_class' => 'menu',
+                                                                'menu_id'         => 'menu-social-items',
+                                                                'menu_class'      => 'menu-items',
+                                                                'depth'           => 1,
+                                                                'link_before'     => '<span class="screen-reader-text">',
+                                                                'link_after'      => '</span>',
+                                                                'fallback_cb'     => '',
+                                                        )
+                                                );
+
+                                        } ?>
 				</div>
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<h3 class="menu-toggle assistive-text"><?php esc_html_e( 'Menu', 'tatva' ); ?></h3>

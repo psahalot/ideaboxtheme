@@ -1,6 +1,8 @@
 /**
  * Handles toggling the main navigation menu for small screens.
+ * And also adds a custom CSS class to main navigation if page scrolls more than 100px 
  */
+
 jQuery( document ).ready( function( $ ) {
 	var $masthead = $( '#masthead' ),
 	    timeout = false;
@@ -36,4 +38,21 @@ jQuery( document ).ready( function( $ ) {
 			}
 		}, 200 );
 	} );
+        
+        // add shrink class to site header if page scrolls more than 100px 
+        $(document).on("scroll", function(){
+
+		if($(document).scrollTop() > 100){
+
+			$("#headercontainer").addClass("shrink");
+			updateSliderMargin();
+
+		} else {
+
+			$("#headercontainer").removeClass("shrink");
+			updateSliderMargin();
+
+		}
+
+	});
 } );

@@ -52,7 +52,8 @@ if ( ! function_exists( 'tatva_setup' ) ) {
 
 		// This theme uses wp_nav_menu() in one location
 		register_nav_menus( array(
-				'primary' => esc_html__( 'Primary Menu', 'tatva' )
+				'primary' => esc_html__( 'Primary Menu', 'tatva' ),
+                                'social' => esc_html__('Social Menu', 'tatva')
 			) );
 
 		// This theme supports a variety of post formats
@@ -438,8 +439,8 @@ function tatva_scripts_styles() {
 	}
 
 	// Include this script to envoke a button toggle for the main navigation menu on small screens
-	//wp_register_script( 'small-menu', trailingslashit( get_template_directory_uri() ) . 'js/small-menu.js', array( 'jquery' ), '20130130', true );
-	//wp_enqueue_script( 'small-menu' );
+	wp_register_script( 'small-menu', trailingslashit( get_template_directory_uri() ) . 'js/small-menu.js', array( 'jquery' ), '20130130', true );
+	wp_enqueue_script( 'small-menu' );
 
 }
 add_action( 'wp_enqueue_scripts', 'tatva_scripts_styles' );
