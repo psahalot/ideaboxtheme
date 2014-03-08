@@ -159,6 +159,6 @@ get_header(); ?>
                      </div> <!-- /#featured-posts -->
                 </div> <!-- /#featured-posts-container -->
         </div> <!-- /#front-featured-posts -->
-        <?php } ?>
+        <?php } // end Featured post query ?>
 
 <?php get_footer(); ?>
