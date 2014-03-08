@@ -1001,6 +1001,22 @@ select {
 	position: relative;
 }
 
+#front-featured-posts {
+        background: #f7f7f7; 
+}
+#featured-posts-container {
+	clear: both;
+	width: 90%;
+	font-size: 16px;
+	font-size: 1.6rem;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 10px 0;
+	padding: 1rem 0;
+	color: #333;
+	line-height: 1.5;
+	position: relative;
+}
 /* change site content width for pages without sidebar */
 
 .container-slim .site-content {

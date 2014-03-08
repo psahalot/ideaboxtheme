@@ -6,6 +6,8 @@
  * @since Tatva 1.0
  */
 
+require( get_stylesheet_directory() . '/inc/customizer.php' ); // new customizer options
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
@@ -49,6 +51,16 @@ if ( ! function_exists( 'tatva_setup' ) ) {
 
 		// Create an extra image size for the Post featured image
 		add_image_size( 'post_feature_full_width', 680, 300, true );
+                
+                
+		// Create an extra image size for the Post thumbnail image
+		add_image_size( 'post_feature_thumb', 368, 243, true );
+                
+                // hard crop store front and taxonomy product images for downloads
+                add_image_size( 'product-image', 540, 360, true );
+                
+                // hard crop store front and taxonomy product images thumbnail for downloads
+                add_image_size( 'product-image-thumb', 370, 243, true );
 
 		// This theme uses wp_nav_menu() in one location
 		register_nav_menus( array(
@@ -202,6 +214,7 @@ function tatva_class_names($classes) {
 	// return the $classes array
 	return $classes;
 }
+
 
 /**
  * Register widgetized areas
