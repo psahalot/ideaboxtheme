@@ -211,6 +211,10 @@ function tatva_class_names($classes) {
         elseif (!is_front_page()) {
             $classes[]= 'container-slim';
         }
+        
+        if ( is_front_page() && !get_theme_mod( 'tatva_edd_front_featured_products' ) ){ 
+            $classes[]= 'no-featured-products'; 
+        }
 	// return the $classes array
 	return $classes;
 }
