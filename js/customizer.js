@@ -20,6 +20,11 @@
 			$( '.tatva-store-button a' ).text( to );
 		} );
 	} );
+        wp.customize( 'tatva_edd_store_link_text', function( value ) {
+		value.bind( function( to ) {
+			$( '.tatva-store-button a' ).text( to );
+		} );
+	} );
         
 	// Header text color.
 	wp.customize( 'header_textcolor', function( value ) {

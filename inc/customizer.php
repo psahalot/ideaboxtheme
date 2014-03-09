@@ -134,7 +134,7 @@ function tatva_customize_register( $wp_customize ) {
 			'description' 	=> __( 'All other EDD options are under Dashboard => Downloads.', 'tatva' ),
 			'priority'   	=> 60,
 		) );
-		// store front/product archive headline
+		// store product archive headline
 		$wp_customize->add_setting( 'tatva_edd_store_archives_title', array( 'default' => null ) );
 		$wp_customize->add_control( 'tatva_edd_store_archives_title', array(
 			'label'		=> __( 'Store/Product Archives Main Title', 'tatva' ),
@@ -142,7 +142,7 @@ function tatva_customize_register( $wp_customize ) {
 			'settings'	=> 'tatva_edd_store_archives_title',
 			'priority'	=> 10,
 		) );
-		// store front/product archive description
+		// store product archive description
 		$wp_customize->add_setting( 'tatva_edd_store_archives_description', array( 'default' => null ) );
 		$wp_customize->add_control( new tatva_customize_textarea_control( $wp_customize, 'tatva_edd_store_archives_description', array(
 			'label'		=> __( 'Store/Product Archives Description', 'tatva' ),
@@ -229,10 +229,11 @@ function tatva_customize_register( $wp_customize ) {
 	}
         
         // Add postMessage for EDD store title and description
-        $wp_customize->get_setting( 'tatva_edd_store_archives_title' )->transport               = 'postMessage';
-        $wp_customize->get_setting( 'tatva_edd_store_archives_description' )->transport         = 'postMessage';
+        $wp_customize->get_setting( 'tatva_edd_store_archives_title' )->transport         = 'postMessage';
+        $wp_customize->get_setting( 'tatva_edd_store_archives_description' )->transport   = 'postMessage';
         
-        // Add postMessage for EDD front page store link text and URL
+        // Add postMessage for EDD front page settings
+        $wp_customize->get_setting( 'tatva_edd_front_featured_title' )->transport       = 'postMessage';
         $wp_customize->get_setting( 'tatva_edd_store_link_text' )->transport            = 'postMessage';
         $wp_customize->get_setting( 'tatva_edd_store_link_url' )->transport             = 'postMessage';
         
