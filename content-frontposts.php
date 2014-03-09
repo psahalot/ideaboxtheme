@@ -30,9 +30,11 @@
             <div id="featured-posts-container" class="row">
             
                 <div id="featured-posts" class="col grid_12_of_12">
-                
-                    <h3 class="featured-section-title"><?php echo get_theme_mod('tatva_front_featured_posts_title'); ?></h3>
-                    
+                    <?php if ( get_theme_mod( 'tatva_front_featured_posts_title' ) ) : ?>
+                        <h3 class="featured-section-title">
+                            <?php echo get_theme_mod('tatva_front_featured_posts_title'); ?>
+                        </h3>
+                    <?php endif; ?>
                         <?php if ($featuredposts->have_posts()) : $i = 1; ?>
                     
                                 <?php while ($featuredposts->have_posts()) : $featuredposts->the_post(); ?>
