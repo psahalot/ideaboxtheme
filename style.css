@@ -982,6 +982,10 @@ select {
 .home-product-info .product-details-link {
         background: #42A2CE;
         color: #fff; 
+        font-weight: 300;
+        font-size: 14px; 
+        font-size: 1.4rem; 
+        letter-spacing: 1px; 
         float: right; 
         padding: 10px 15px; 
         padding: 1rem 1.5rem; 
@@ -1016,6 +1020,51 @@ select {
 	color: #333;
 	line-height: 1.5;
 	position: relative;
+}
+
+.home-featured-post:nth-of-type(4n+1) {
+        margin-left: 0;
+}
+
+.home-featured-post {
+        min-height: 260px; 
+}
+.featured-post-content {
+        position: relative; 
+}
+
+.home-featured-post-title {
+        font-size: 18px; 
+        font-size: 1.8rem;
+        text-align: center;
+        margin-top: 0; 
+}
+
+.feature-more-link {
+        background: #42A2CE; 
+        position: absolute;
+        bottom: 6px;
+        right: 0; 
+        font-weight: 300;
+        font-size: 14px; 
+        font-size: 1.4rem; 
+        letter-spacing: 1px;
+        padding: 10px 15px; 
+        padding: 1rem 1.5rem;
+        color: #fff;
+        opacity: 0.9;
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -khtml-transition: all 0.5s ease;
+        -moz-transitiokn: all 0.5s ease;
+}
+
+.feature-more-link:hover {
+        opacity: 1; 
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -khtml-transition: all 0.5s ease;
+        -moz-transitiokn: all 0.5s ease;
 }
 /* change site content width for pages without sidebar */
 
