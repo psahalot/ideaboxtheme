@@ -21,7 +21,7 @@
                        
                         <div class="col grid_12_of_12">
                             
-                        <h3 class="featured-section-title"><?php echo get_theme_mod('tatva_edd_front_featured_title'); ?></h3>    
+                        <h3 class="featured-edd-title"><?php echo get_theme_mod('tatva_edd_front_featured_title'); ?></h3>    
                         <?php 
                             $per_page = intval( get_theme_mod( 'tatva_edd_store_front_count' ) );
                             $product_args = array(
@@ -46,7 +46,7 @@
                                                                             <?php if(!edd_has_variable_prices(get_the_ID())) { ?>
                                                                                     <?php // echo edd_get_purchase_link(get_the_ID(), 'Add to Cart', 'button'); ?>
                                                                             <?php } ?>
-                                                                            <a href="<?php the_permalink(); ?>" class="product-details-link" title="WordPress theme">View Details</a>
+                                                                            <a href="<?php the_permalink(); ?>" class="product-details-link">View Details</a>
                                                                     </div><!--end .product-buttons-->
                                                             <?php } ?>
                                                         </div> <!--end .home-product-info -->

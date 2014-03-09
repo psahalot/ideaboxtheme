@@ -911,9 +911,21 @@ select {
 
 
 /* Home page products grid */
+
+.featured-edd-title {
+        text-transform: uppercase;
+        text-align: center;
+        margin: 30px 0 20px; 
+        margin: 3rem 0 2rem;
+        font-size: 30px; 
+        font-size: 3rem;
+        color: #666;
+}
+
 .home-product .home-product-title {
-        font-size: 20px;
-        font-size: 2rem; 
+        color: #666; 
+        font-size: 18px;
+        font-size: 1.8rem; 
         letter-spacing: 1px; 
         text-transform: uppercase; 
         text-align: center;
@@ -922,10 +934,8 @@ select {
 }
 
 .home-product {
-        margin-bottom: 30px; 
-        margin-bottom: 3rem; 
-        margin-top: 30px; 
-        margin-top: 3rem; 
+        margin-bottom: 20px; 
+        margin-bottom: 2rem; 
 }
 
 .home-product:nth-of-type(3n+1) {
@@ -935,7 +945,6 @@ select {
 .home-product .product-image {
         position: relative; 
         overflow: hidden; 
-        max-height: 360px;
 }
 
 .home-product-info {
@@ -990,6 +999,13 @@ select {
         padding: 10px 15px; 
         padding: 1rem 1.5rem; 
 }
+
+.tatva-store-button {
+        text-align: center;
+        margin-bottom: 40px; 
+        margin-bottom: 4rem; 
+}
+
 .site-content {
         background: #fff; 
 	clear: both;
@@ -1004,6 +1020,11 @@ select {
 	line-height: 1.5;
 	position: relative;
 }
+
+
+/* ================================
+* Featured posts on front page 
+================================== */
 
 #front-featured-posts {
         background: #f7f7f7; 
@@ -1027,21 +1048,25 @@ select {
 	position: relative;
 }
 
+.featured-section-title {
+        color: #666; 
+}
 .home-featured-post:nth-of-type(4n+1) {
         margin-left: 0;
 }
 
 .home-featured-post {
-        min-height: 260px; 
+        margin-bottom: 20px;
+        margin-bottom: 2rem; 
 }
 .featured-post-content {
         position: relative; 
 }
 
 .home-featured-post-title {
-        font-size: 18px; 
-        font-size: 1.8rem;
-        text-align: center;
+        font-family: "Open Sans", sans-serif; 
+        font-size: 16px; 
+        font-size: 1.6rem; 
         margin-top: 0; 
 }
 
@@ -2525,6 +2550,12 @@ li span.dots {
 
 /*  Go full Width at less than 650px */
 @media only screen and (max-width: 650px) {
+        img.size-full, 
+        img.size-large, 
+        img.header-image, 
+        img.wp-post-image {
+                width: 100%; 
+        }
 	.grid_1_of_12,
 	.grid_2_of_12,
 	.grid_3_of_12,
@@ -2542,6 +2573,33 @@ li span.dots {
 	.col {
 		margin: 0;
 	}
+        #headercontainer {
+                position: relative;
+        }
+        .site-title h1 {
+                text-align: center;
+        }
+        .nav-menu {
+                text-align: center;
+        }
+        .main-navigation li {
+                float: none;
+                display: inline-block; 
+        }
+        #bannercontainer {
+                margin-top: 0px; 
+        }
+        #maincontentcontainer {
+                margin-top: 0px;
+                margin-bottom: 0px;
+        }
+        .site-content {
+                width: 100%; 
+        }
+        .sidebar {
+                border-top: solid 1px #ddd; 
+                padding: 30px 30px 0;
+        }
 	.main-small-navigation .nav-menu, .nav-menu ul {
 		padding: 0;
 	}
@@ -2549,6 +2607,15 @@ li span.dots {
 		padding-left: 16px;
 		padding-left: 1.6rem;
 	}
+        .home-featured-post {
+                margin-bottom: 20px; 
+                margin-bottom: 2rem; 
+        }
+        .home-featured-post-title {
+                font-size: 24px; 
+                font-size: 2.4rem;
+                text-align: center; 
+        }
 }
 
 
@@ -2569,11 +2636,12 @@ li span.dots {
 	}
 	.main-small-navigation {
 		text-align: center;
+                margin-bottom: 20px;
+                margin-bottom: 2rem; 
 	}
 	.main-small-navigation ul li,
 	.main-navigation ul li {
-		background-color: #fff;
-		margin: 5px 0;
+		margin: 15px 0;
 		text-align: center;
 	}
 	.main-navigation ul ul, .main-navigation ul ul li ul {
