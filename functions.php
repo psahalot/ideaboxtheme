@@ -7,7 +7,6 @@
  */
 
 require( get_stylesheet_directory() . '/inc/customizer.php' ); // new customizer options
-include( get_stylesheet_directory() . '/inc/edd-config.php' ); 
 
 /**
  * Set the content width based on the theme's design and stylesheet.

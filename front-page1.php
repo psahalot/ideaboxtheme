@@ -18,13 +18,13 @@
  */
 
 get_header(); ?>
+
         
         <div id="bannercontainer">
 		
             <div class="banner row">
-	
-		<?php if ( is_front_page() ) {
 
+                    <?php 
                     // Count how many banner sidebars are active so we can work out how many containers we need
 		
                     $bannerSidebars = 0;
@@ -56,8 +56,8 @@ get_header(); ?>
 						<?php }
 					} ?>
 
-				<?php }
-			} ?>
+				<?php } ?>
+			
 		</div> <!-- /.banner.row -->
                 
 	</div> <!-- /#bannercontainer -->

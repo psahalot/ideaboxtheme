@@ -14,6 +14,73 @@
 
 get_header(); ?>
 
+<?php 
+
+// check if WP is using Front Page
+
+if (is_front_page()) { ?>
+  
+        <div id="bannercontainer">
+		
+            <div class="banner row">
+
+                    <?php 
+                    // Count how many banner sidebars are active so we can work out how many containers we need
+		
+                    $bannerSidebars = 0;
+		
+                    for ( $x=1; $x<=2; $x++ ) {
+		
+                        if ( is_active_sidebar( 'home-featured' . $x ) ) {
+			
+                            $bannerSidebars++;
+			
+                            }
+			
+                       }
+
+				// If there's one or more one active sidebars, create a row and add them
+				if ( $bannerSidebars > 0 ) { ?>
+					<?php
+					// Work out the container class name based on the number of active banner sidebars
+					$containerClass = "grid_" . 12 / $bannerSidebars . "_of_12";
+
+					// Display the active banner sidebars
+					for ( $x=1; $x<=2; $x++ ) {
+						if ( is_active_sidebar( 'home-featured'. $x ) ) { ?>
+							<div class="col <?php echo $containerClass?>">
+								<div class="widget-area" role="complementary">
+									<?php dynamic_sidebar( 'home-featured'. $x ); ?>
+								</div> <!-- /.widget-area -->
+							</div> <!-- /.col.<?php echo $containerClass?> -->
+						<?php }
+					} ?>
+
+				<?php } ?>
+			
+		</div> <!-- /.banner.row -->
+                
+	</div> <!-- /#bannercontainer -->
+        
+	<?php 
+        
+            // display front page widgets
+            get_sidebar( 'front' );  
+
+            // Call template file to display featured products on front page
+            // This has been done in parts for better code organization. 
+            get_template_part('content','eddfront'); 
+
+            // Display featured posts on front page
+            get_template_part('content','frontposts');
+        
+        ?>
+        
+
+<?php } //end front page check ?>
+                                                        
+                                                  
+
 <div id="maincontentcontainer">
 
 	<div id="primary" class="site-content row" role="main">

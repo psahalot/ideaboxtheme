@@ -16,6 +16,7 @@ get_header(); ?>
                     <div class="col grid_12_of12">
                         
                         <div class="main-content">
+                            <?php if ( get_theme_mod( 'tatva_edd_store_archives_title' ) || get_theme_mod( 'tatva_edd_store_archives_description' ) ) : ?>
                             <div class="edd-store-info">
                                 <?php if ( get_theme_mod( 'tatva_edd_store_archives_title' ) ) : ?>
 					<h2 class="store-title"><?php echo get_theme_mod( 'tatva_edd_store_archives_title' ); ?></h2>
@@ -25,7 +26,9 @@ get_header(); ?>
 						<?php echo wpautop( get_theme_mod( 'tatva_edd_store_archives_description' ) ); ?>
 					</div>
 				<?php endif; ?>
-                            </div>
+                            </div> <!-- /.edd-store-info -->
+                            <?php endif; ?>
+                            
 			<?php
                         
 			$current_page = get_query_var('paged');

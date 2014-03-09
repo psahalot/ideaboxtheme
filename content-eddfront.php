@@ -20,8 +20,12 @@
                 <div id="primary" class="site-content row" role="main">
                        
                         <div class="col grid_12_of_12">
-                            
-                        <h3 class="featured-edd-title"><?php echo get_theme_mod('tatva_edd_front_featured_title'); ?></h3>    
+                       <?php if ( get_theme_mod( 'tatva_edd_front_featured_title' ) ) : ?>
+                        <h3 class="featured-edd-title">
+                            <?php echo get_theme_mod('tatva_edd_front_featured_title'); ?>
+                        </h3>   
+                        <?php endif; ?>
+                        
                         <?php 
                             $per_page = intval( get_theme_mod( 'tatva_edd_store_front_count' ) );
                             $product_args = array(
