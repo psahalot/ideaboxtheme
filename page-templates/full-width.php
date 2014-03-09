@@ -27,5 +27,6 @@ get_header(); ?>
 
 		</div> <!-- /.col.grid_12_of_12 -->
 	</div><!-- /#primary.site-content.row -->
+</div> <!-- /#maincontentcontainer -->
 
 <?php get_footer(); ?>

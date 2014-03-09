@@ -11,8 +11,6 @@
  */
 ?>
 
-	</div> <!-- /#maincontentcontainer -->
-
 	<div id="footercontainer">
 
 		<footer class="site-footer row" role="contentinfo">

@@ -46,4 +46,6 @@ get_header(); ?>
 
 	</div> <!-- /#primary.site-content.row -->
 
+</div> <!-- /#maincontentcontainer -->
+
 <?php get_footer(); ?>

@@ -93,7 +93,6 @@ function tatva_customize_register( $wp_customize ) {
                 'label'		=> __( 'Main Title', 'tatva' ),
                 'section'	=> 'tatva_front_page_post_options',
                 'settings'	=> 'tatva_front_featured_posts_title',
-                'transport'     => 'postMessage',
                 'priority'	=> 10,
         ) );
         
@@ -122,7 +121,6 @@ function tatva_customize_register( $wp_customize ) {
             'label' 	=> __( 'Posts Read More Link Text', 'tatva' ),
             'section' 	=> 'tatva_front_page_post_options',
                 'settings' 	=> 'tatva_front_featured_link_text',
-                'transport'     => 'postMessage',
                 'priority'	=> 30,
         ) );
         
@@ -136,22 +134,20 @@ function tatva_customize_register( $wp_customize ) {
 			'description' 	=> __( 'All other EDD options are under Dashboard => Downloads.', 'tatva' ),
 			'priority'   	=> 60,
 		) );
-		// store front/downloads archive headline
+		// store front/product archive headline
 		$wp_customize->add_setting( 'tatva_edd_store_archives_title', array( 'default' => null ) );
 		$wp_customize->add_control( 'tatva_edd_store_archives_title', array(
-			'label'		=> __( 'Store/Download Archives Main Title', 'tatva' ),
+			'label'		=> __( 'Store/Product Archives Main Title', 'tatva' ),
 			'section'	=> 'tatva_edd_options',
 			'settings'	=> 'tatva_edd_store_archives_title',
-                        'transport'     => 'postMessage',
 			'priority'	=> 10,
 		) );
-		// store front/downloads archive description
+		// store front/product archive description
 		$wp_customize->add_setting( 'tatva_edd_store_archives_description', array( 'default' => null ) );
 		$wp_customize->add_control( new tatva_customize_textarea_control( $wp_customize, 'tatva_edd_store_archives_description', array(
-			'label'		=> __( 'Store/Download Archives Description', 'tatva' ),
+			'label'		=> __( 'Store/Product Archives Description', 'tatva' ),
 			'section'	=> 'tatva_edd_options',
 			'settings'	=> 'tatva_edd_store_archives_description',
-                        'transport'     => 'postMessage',
 			'priority'	=> 20,
 		) ) );
 		// product read more link
@@ -160,7 +156,6 @@ function tatva_customize_register( $wp_customize ) {
 		    'label' 	=> __( 'Store Item Details Link Text', 'tatva' ),
 		    'section' 	=> 'tatva_edd_options',
 			'settings' 	=> 'tatva_product_view_details',
-                        'transport'     => 'postMessage',
 			'priority'	=> 30,
 		) );
 		// store archive item count
@@ -169,7 +164,6 @@ function tatva_customize_register( $wp_customize ) {
 		    'label' 	=> __( 'Store Archive Item Count', 'tatva' ),
 		    'section' 	=> 'tatva_edd_options',
 			'settings' 	=> 'tatva_store_archive_count',
-                        'transport'     => 'postMessage',
 			'priority'	=> 40,
 		) );
 		// show comments on downloads?
@@ -177,7 +171,6 @@ function tatva_customize_register( $wp_customize ) {
 		$wp_customize->add_control( 'tatva_download_comments', array(
 			'label'		=> __( 'Comments on Downloads?', 'tatva' ),
 			'section'	=> 'tatva_edd_options',
-                        'transport'     => 'postMessage',
 			'priority'	=> 50,
 			'type'      => 'checkbox',
 		) );
@@ -204,7 +197,6 @@ function tatva_customize_register( $wp_customize ) {
                         'label'		=> __( 'Main Title', 'tatva' ),
                         'section'	=> 'tatva_edd_front_page_options',
                         'settings'	=> 'tatva_edd_front_featured_title',
-                        'transport'     => 'postMessage',
                         'priority'	=> 10,
                 ) );
 
@@ -214,7 +206,6 @@ function tatva_customize_register( $wp_customize ) {
 		    'label' 	=> __( 'Number of products to display', 'tatva' ),
 		    'section' 	=> 'tatva_edd_front_page_options',
 			'settings' 	=> 'tatva_edd_store_front_count',
-                        'transport'     => 'postMessage',
 			'priority'	=> 20,
 		) );
                 // sotre link text
@@ -223,7 +214,6 @@ function tatva_customize_register( $wp_customize ) {
 		    'label' 	=> __( 'Store Link Text', 'tatva' ),
 		    'section' 	=> 'tatva_edd_front_page_options',
 			'settings' 	=> 'tatva_edd_store_link_text',
-                        'transport'     => 'postMessage',
 			'priority'	=> 30,
 		) );
                 // sotre link
@@ -232,7 +222,6 @@ function tatva_customize_register( $wp_customize ) {
 		    'label' 	=> __( 'Store Page Link URL', 'tatva' ),
 		    'section' 	=> 'tatva_edd_front_page_options',
 			'settings' 	=> 'tatva_edd_store_link_url',
-                        'transport'     => 'postMessage',
 			'priority'	=> 40,
 		) );
                 

@@ -21,6 +21,7 @@
                        
                         <div class="col grid_12_of_12">
                             
+                        <h3 class="featured-section-title"><?php echo get_theme_mod('tatva_edd_front_featured_title'); ?></h3>    
                         <?php 
                             $per_page = intval( get_theme_mod( 'tatva_edd_store_front_count' ) );
                             $product_args = array(

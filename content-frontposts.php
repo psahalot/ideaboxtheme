@@ -26,34 +26,58 @@
                 $featuredposts = new WP_Query($featured_post_args);
                 ?>
         <div id="front-featured-posts">
-                <div id="featured-posts-container" class="row">
-                    <div id="featured-posts" class="col grid_12_of_12">
-                        <h3 class="featured-section-title"><?php echo get_theme_mod('tatva_front_featured_posts_title'); ?></h3>
+                
+            <div id="featured-posts-container" class="row">
+            
+                <div id="featured-posts" class="col grid_12_of_12">
+                
+                    <h3 class="featured-section-title"><?php echo get_theme_mod('tatva_front_featured_posts_title'); ?></h3>
+                    
                         <?php if ($featuredposts->have_posts()) : $i = 1; ?>
+                    
                                 <?php while ($featuredposts->have_posts()) : $featuredposts->the_post(); ?>
+                    
                                         <div class="col grid_3_of_12 home-featured-post">
-                                                <div class="featured-post-content">
-                                                        <a href="<?php the_permalink(); ?>">
-                                                                <?php the_post_thumbnail('post_feature_thumb'); ?>
-                                                                <span class="feature-more-link"><?php echo get_theme_mod('tatva_front_featured_link_text'); ?></span>
-                                                        </a>
-                                                </div> <!--end .featured-post-content -->
+                    
+                                            <div class="featured-post-content">
+                                            
                                                 <a href="<?php the_permalink(); ?>">
-                                                        <h3 class="home-featured-post-title"><?php the_title(); ?></h3>
+                                                
+                                                            <?php the_post_thumbnail('post_feature_thumb'); ?>
+                                            
+                                                            <span class="feature-more-link"><?php echo get_theme_mod('tatva_front_featured_link_text'); ?></span>
+                                                        
                                                 </a>
+                                              
+                                            </div> <!--end .featured-post-content -->
+                                            
+                                            <a href="<?php the_permalink(); ?>">
+                                            
+                                                <h3 class="home-featured-post-title"><?php the_title(); ?></h3>
+                                                
+                                            </a>
+                                        
                                         </div><!--end .home-featured-post-->
-                                        <?php $i+=1; ?>
-                                <?php endwhile; ?>
-                        <?php else : ?>
+                                        
+                                            <?php $i+=1; ?>
+                                    
+                                      <?php endwhile; ?>
+                        
+                           <?php else : ?>
 
-                                <h2 class="center">Not Found</h2>
-                                <p class="center">Sorry, but you are looking for something that isn't here.</p>
-                                <?php get_search_form(); ?>
+                                    
+                                        <h2 class="center">Not Found</h2>
+                                
+                                        <p class="center">Sorry, but you are looking for something that isn't here.</p>
+                                
+                                            <?php get_search_form(); ?>
 
-                        <?php endif; ?>
+                            <?php endif; ?>
 
                      </div> <!-- /#featured-posts -->
+                     
                 </div> <!-- /#featured-posts-container -->
+                
         </div> <!-- /#front-featured-posts -->
             
 <?php } // end Featured post query ?>

@@ -17,15 +17,24 @@
 get_header(); ?>
         
         <div id="bannercontainer">
-		<div class="banner row">
-			<?php if ( is_front_page() ) {
-				// Count how many banner sidebars are active so we can work out how many containers we need
-				$bannerSidebars = 0;
-				for ( $x=1; $x<=2; $x++ ) {
-					if ( is_active_sidebar( 'home-featured' . $x ) ) {
-						$bannerSidebars++;
-					}
-				}
+		
+            <div class="banner row">
+	
+		<?php if ( is_front_page() ) {
+
+                    // Count how many banner sidebars are active so we can work out how many containers we need
+		
+                    $bannerSidebars = 0;
+		
+                    for ( $x=1; $x<=2; $x++ ) {
+		
+                        if ( is_active_sidebar( 'home-featured' . $x ) ) {
+			
+                            $bannerSidebars++;
+			
+                            }
+			
+                       }
 
 				// If there's one or more one active sidebars, create a row and add them
 				if ( $bannerSidebars > 0 ) { ?>
@@ -47,6 +56,7 @@ get_header(); ?>
 				<?php }
 			} ?>
 		</div> <!-- /.banner.row -->
+                
 	</div> <!-- /#bannercontainer -->
         
 	<?php 
