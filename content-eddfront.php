@@ -10,14 +10,18 @@
 <?php 
         // check if EDD is active
         
-        if ( class_exists( 'Easy_Digital_Downloads' ) ) { ?>
-	<div id="maincontentcontainer">
+        if ( class_exists( 'Easy_Digital_Downloads' ) ) { 
+			
+            // check if user has enabled featured products for front page
+            if ( get_theme_mod( 'tatva_edd_front_featured_products' ) ){ ?>
+                        
+            <div id="maincontentcontainer">
         
-	<div id="primary" class="site-content row" role="main">
-		<div class="col grid_12_of_12">
-                    
-                    <?php
-			if ( get_theme_mod( 'tatva_edd_front_featured_products' ) ){
+                <div id="primary" class="site-content row" role="main">
+                       
+                        <div class="col grid_12_of_12">
+                            
+                        <?php 
                             $per_page = intval( get_theme_mod( 'tatva_edd_store_front_count' ) );
                             $product_args = array(
                                     'post_type' => 'download',
@@ -56,14 +60,15 @@
                                     <?php get_search_form(); ?>
 
                             <?php endif; ?>
-                        <?php } ?>
-                                    
-                                    <p class="tatva-store-button"><a class="cta-button" href="<?php echo esc_url( get_theme_mod( 'tatva_edd_store_link_url' ) ); ?>"><?php echo get_theme_mod( 'tatva_edd_store_link_text' ); ?></a></p>
-                                    
-		</div> <!-- /.col.grid_12_of_12 -->
+                            
+                            </div> <!-- /.col.grid_12_of_12 -->
+                            
+                          <p class="tatva-store-button"><a class="cta-button" href="<?php echo esc_url( get_theme_mod( 'tatva_edd_store_link_url' ) ); ?>"><?php echo get_theme_mod( 'tatva_edd_store_link_text' ); ?></a></p>
                 
-	</div><!-- /#primary.site-content.row -->
+                    </div><!-- /#primary.site-content.row -->
+
+            </div><!-- /#maincontentcontainer -->
+            
+            <?php } // end featured products on front page check ?>
         
-        </div><!-- /#maincontentcontainer -->
-        
-        <?php } // end EDD Check  ?> 
+    <?php } // end EDD Check  ?> 
