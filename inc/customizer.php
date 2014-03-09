@@ -87,10 +87,20 @@ function tatva_customize_register( $wp_customize ) {
                 'type'      => 'checkbox',
         ) );
         
+        // Front featured posts section headline
+        $wp_customize->add_setting( 'tatva_front_featured_posts_title', array( 'default' => __( 'Latest Posts', 'tatva') ) );
+        $wp_customize->add_control( 'tatva_front_featured_posts_title', array(
+                'label'		=> __( 'Main Title', 'tatva' ),
+                'section'	=> 'tatva_front_page_post_options',
+                'settings'	=> 'tatva_front_featured_posts_title',
+                'transport'     => 'postMessage',
+                'priority'	=> 10,
+        ) );
+        
         // select number of posts for featured posts on front page
         $wp_customize->add_setting( 'tatva_front_featured_posts_count', array( 'default' => 3 ) );		
         $wp_customize->add_control( 'tatva_front_featured_posts_count', array(
-            'label' 	=> __( 'Front Page featured posts count', 'tatva' ),
+            'label' 	=> __( 'Number of posts to display (multiple of 4)', 'tatva' ),
             'section' 	=> 'tatva_front_page_post_options',
                 'settings' 	=> 'tatva_front_featured_posts_count',
                 'priority'	=> 20,
@@ -105,6 +115,16 @@ function tatva_customize_register( $wp_customize ) {
                 'settings' => 'tatva_front_featured_posts_cat',
                 'priority' => 20,
          ) ) );
+        
+        // featured post read more link
+        $wp_customize->add_setting( 'tatva_front_featured_link_text', array( 'default' => __( 'Read more', 'tatva' ) ) );	
+        $wp_customize->add_control( 'tatva_front_featured_link_text', array(
+            'label' 	=> __( 'Posts Read More Link Text', 'tatva' ),
+            'section' 	=> 'tatva_front_page_post_options',
+                'settings' 	=> 'tatva_front_featured_link_text',
+                'transport'     => 'postMessage',
+                'priority'	=> 30,
+        ) );
         
 	/** ===============
 	 * Easy Digital Downloads Options
@@ -137,7 +157,7 @@ function tatva_customize_register( $wp_customize ) {
 		// product read more link
 		$wp_customize->add_setting( 'tatva_product_view_details', array( 'default' => __( 'View Details', 'tatva' ) ) );	
 		$wp_customize->add_control( 'tatva_product_view_details', array(
-		    'label' 	=> __( 'Store Item Link Text', 'tatva' ),
+		    'label' 	=> __( 'Store Item Details Link Text', 'tatva' ),
 		    'section' 	=> 'tatva_edd_options',
 			'settings' 	=> 'tatva_product_view_details',
                         'transport'     => 'postMessage',
@@ -162,7 +182,9 @@ function tatva_customize_register( $wp_customize ) {
 			'type'      => 'checkbox',
 		) );
                 
+                /* ========================================================= */
                 // Add new section for EDD featured products on Front Page
+                /* ========================================================= */
                 $wp_customize->add_section( 'tatva_edd_front_page_options', array(
 	    	'title'       	=> __( 'EDD Front Page', 'tatva' ),
 			'description' 	=> __( 'Settings for displaying featured products on Front Page', 'tatva' ),
@@ -176,6 +198,16 @@ function tatva_customize_register( $wp_customize ) {
 			'priority'	=> 10,
 			'type'      => 'checkbox',
 		) );
+                // Front featured products section headline
+                $wp_customize->add_setting( 'tatva_edd_front_featured_title', array( 'default' => __( 'Latest Products', 'tatva') ) );
+                $wp_customize->add_control( 'tatva_edd_front_featured_title', array(
+                        'label'		=> __( 'Main Title', 'tatva' ),
+                        'section'	=> 'tatva_edd_front_page_options',
+                        'settings'	=> 'tatva_edd_front_featured_title',
+                        'transport'     => 'postMessage',
+                        'priority'	=> 10,
+                ) );
+
                 // store front item count
 		$wp_customize->add_setting( 'tatva_edd_store_front_count', array( 'default' => 6 ) );		
 		$wp_customize->add_control( 'tatva_edd_store_front_count', array(
@@ -212,8 +244,8 @@ function tatva_customize_register( $wp_customize ) {
         $wp_customize->get_setting( 'tatva_edd_store_archives_description' )->transport         = 'postMessage';
         
         // Add postMessage for EDD front page store link text and URL
-        //$wp_customize->get_setting( 'tatva_edd_store_link_text' )->transport            = 'postMessage';
-        //$wp_customize->get_setting( 'tatva_edd_store_link_url' )->transport             = 'postMessage';
+        $wp_customize->get_setting( 'tatva_edd_store_link_text' )->transport            = 'postMessage';
+        $wp_customize->get_setting( 'tatva_edd_store_link_url' )->transport             = 'postMessage';
         
 }
 add_action( 'customize_register', 'tatva_customize_register' );
