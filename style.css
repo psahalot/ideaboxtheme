@@ -1008,6 +1008,11 @@ select {
 #front-featured-posts {
         background: #f7f7f7; 
 }
+
+.no-featured-products #front-featured-posts {
+        background: #fff; 
+}
+
 #featured-posts-container {
 	clear: both;
 	width: 90%;
