@@ -45,11 +45,10 @@
 
 		</footer> <!-- /.site-footer.row -->
 
-		<?php if ( of_get_option( 'footer_content', tatva_get_credits() ) ) {
-			echo '<div class="row smallprint">';
-			echo apply_filters( 'meta_content', wp_kses_post( of_get_option( 'footer_content', tatva_get_credits() ) ) );
-			echo '</div> <!-- /.smallprint -->';
-		} ?>
+		
+                <div class="row smallprint">
+                    <p> <a href="http://ideaboxthemes.com">Tatva WordPress theme by IdeaBox</a></p>
+                </div> <!-- /.smallprint -->
 
 	</div> <!-- /.footercontainer -->
 

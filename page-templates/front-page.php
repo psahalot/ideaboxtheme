@@ -1,7 +1,8 @@
 <?php
 /**
  * 
- *
+ * Template Name: Front Page
+ * 
  * Description: Displays a full-width front page. The front page template provides an optional
  * featured section that allows for highlighting a key message. It can contain up to 2 widget areas,
  * in one or two columns. These widget areas are dynamic so if only one widget is used, it will be
@@ -73,7 +74,5 @@ get_header(); ?>
 
             // Display featured posts on front page
             get_template_part('content','frontposts');
-        
-        ?>
-        
-<?php get_footer(); ?>
+            
+get_footer(); ?>

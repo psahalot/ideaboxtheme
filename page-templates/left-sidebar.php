@@ -13,10 +13,11 @@ get_header(); ?>
 <div id="maincontentcontainer">
 
 	<div id="primary" class="site-content row" role="main">
-
+            
 		<?php get_sidebar(); ?>
 		<div class="col grid_8_of_12">
 
+                    <div class="main-content">
 			<?php if ( have_posts() ) : ?>
 
 				<?php // Start the Loop ?>
@@ -31,7 +32,9 @@ get_header(); ?>
 				<?php get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found ?>
 
 			<?php endif; // end have_posts() check ?>
-
+                        
+                    </div> <!-- /.main-cotent -->
+                    
 		</div> <!-- /.col.grid_8_of_12 -->
 
 	</div> <!-- /#primary.site-content.row -->
