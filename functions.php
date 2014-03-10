@@ -57,7 +57,7 @@ if ( ! function_exists( 'tatva_setup' ) ) {
 		add_image_size( 'post_feature_thumb', 368, 243, true );
                 
                 // hard crop store front and taxonomy product images for downloads
-                add_image_size( 'product-image', 540, 360, true );
+                add_image_size( 'product-image-large', 680, 300, true );
                 
                 // hard crop store front and taxonomy product images thumbnail for downloads
                 add_image_size( 'product-image-thumb', 370, 243, true );
@@ -74,17 +74,18 @@ if ( ! function_exists( 'tatva_setup' ) ) {
 		// Enable support for Custom Backgrounds
 		add_theme_support( 'custom-background', array(
 				// Background color default
-				'default-color' => 'fff',
+				'default-color' => 'eee',
 				// Background image default
-				'default-image' => trailingslashit( get_template_directory_uri() ) . 'images/faint-squares.jpg'
+				'default-image' => ''
+                                
 			) );
 
 		// Enable support for Custom Headers (or in our case, a custom logo)
 		add_theme_support( 'custom-header', array(
 				// Header image default
-				'default-image' => trailingslashit( get_template_directory_uri() ) . 'images/logo.png',
+				'default-image' => '',
 				// Header text display default
-				'header-text' => false,
+				'header-text' => true,
 				// Header text color default
 				'default-text-color' => '000',
 				// Flexible width
@@ -96,14 +97,6 @@ if ( ! function_exists( 'tatva_setup' ) ) {
 				// Header image height (in pixels)
 				'height' => 80
 			) );
-
-		// Enable support for Theme Options.
-		// Rather than reinvent the wheel, we're using the Options Framework by Devin Price, so huge props to him!
-		// http://wptheming.com/options-framework-theme/
-		if ( !function_exists( 'optionsframework_init' ) ) {
-			define( 'OPTIONS_FRAMEWORK_DIRECTORY', trailingslashit( get_template_directory_uri() ) . 'inc/' );
-			require_once trailingslashit( dirname( __FILE__ ) ) . 'inc/options-framework.php';
-		}
 
 	}
 }
@@ -865,121 +858,6 @@ add_filter( 'wp_nav_menu_objects', 'tatva_add_menu_parent_class' );
  * @since Tatva 1.0
  */
 add_filter( 'widget_text', 'do_shortcode' );
-
-
-/**
- * Return an unordered list of linked social media icons, based on the urls provided in the Theme Options
- *
- * @since Tatva 1.0
- *
- * @return string Unordered list of linked social media icons
- */
-if ( ! function_exists( 'tatva_get_social_media' ) ) {
-	function tatva_get_social_media() {
-		$output = '';
-		$icons = array(
-			array( 'url' => of_get_option( 'social_twitter', '' ), 'icon' => 'fa-twitter', 'title' => esc_html__( 'Follow me on Twitter', 'tatva' ) ),
-			array( 'url' => of_get_option( 'social_facebook', '' ), 'icon' => 'fa-facebook', 'title' => esc_html__( 'Friend me on Facebook', 'tatva' ) ),
-			array( 'url' => of_get_option( 'social_googleplus', '' ), 'icon' => 'fa-google-plus', 'title' => esc_html__( 'Connect with me on Google+', 'tatva' ) ),
-			array( 'url' => of_get_option( 'social_linkedin', '' ), 'icon' => 'fa-linkedin', 'title' => esc_html__( 'Connect with me on LinkedIn', 'tatva' ) ),
-			array( 'url' => of_get_option( 'social_dribbble', '' ), 'icon' => 'fa-dribbble', 'title' => esc_html__( 'Follow me on Dribbble', 'tatva' ) ),
-			array( 'url' => of_get_option( 'social_tumblr', '' ), 'icon' => 'fa-tumblr', 'title' => esc_html__( 'Follow me on Tumblr', 'tatva' ) ),
-			array( 'url' => of_get_option( 'social_github', '' ), 'icon' => 'fa-github', 'title' => esc_html__( 'Fork me on GitHub', 'tatva' ) ),
-			array( 'url' => of_get_option( 'social_bitbucket', '' ), 'icon' => 'fa-bitbucket', 'title' => esc_html__( 'Fork me on Bitbucket', 'tatva' ) ),
-			array( 'url' => of_get_option( 'social_foursquare', '' ), 'icon' => 'fa-foursquare', 'title' => esc_html__( 'Follow me on Foursquare', 'tatva' ) ),
-			array( 'url' => of_get_option( 'social_youtube', '' ), 'icon' => 'fa-youtube', 'title' => esc_html__( 'Subscribe to me on YouTube', 'tatva' ) ),
-			array( 'url' => of_get_option( 'social_instagram', '' ), 'icon' => 'fa-instagram', 'title' => esc_html__( 'Follow me on Instagram', 'tatva' ) ),
-			array( 'url' => of_get_option( 'social_flickr', '' ), 'icon' => 'fa-flickr', 'title' => esc_html__( 'Connect with me on Flickr', 'tatva' ) ),
-			array( 'url' => of_get_option( 'social_pinterest', '' ), 'icon' => 'fa-pinterest', 'title' => esc_html__( 'Follow me on Pinterest', 'tatva' ) )
-		);
-
-		foreach ( $icons as $key ) {
-			$value = $key['url'];
-			if ( !empty( $value ) ) {
-				$output .= sprintf( '<li><a href="%1$s" title="%2$s"%3$s><span class="fa-stack fa-lg"><i class="fa fa-square fa-stack-2x"></i><i class="fa %4$s fa-stack-1x fa-inverse"></i></span></a></li>',
-					esc_url( $value ),
-					$key['title'],
-					( !of_get_option( 'social_newtab' ) ? '' : ' target="_blank"' ),
-					$key['icon']
-				);
-			}
-		}
-
-		if ( !empty( $output ) ) {
-			$output = '<ul>' . $output . '</ul>';
-		}
-
-		return $output;
-	}
-}
-
-
-/**
- * Return a string containing the footer credits & link
- *
- * @since Tatva 1.0
- *
- * @return string Footer credits & link
- */
-if ( ! function_exists( 'tatva_get_credits' ) ) {
-	function tatva_get_credits() {
-		$output = '';
-		$output = sprintf( '%1$s <a href="%2$s" title="%3$s">%4$s</a>',
-			esc_html__( 'Proudly powered by', 'tatva' ),
-			esc_url( esc_html__( 'http://wordpress.org/', 'tatva' ) ),
-			esc_attr( esc_html__( 'Semantic Personal Publishing Platform', 'tatva' ) ),
-			esc_html__( 'WordPress', 'tatva' )
-		);
-
-		return $output;
-	}
-}
-
-
-/**
- * Outputs the selected Theme Options inline into the <head>
- *
- * @since Tatva 1.0
- *
- * @return void
- */
-function tatva_theme_options_styles() {
-	$output = '';
-	$imagepath =  trailingslashit( get_template_directory_uri() ) . 'images/';
-	$background_defaults = array(
-		'color' => '#222222',
-		'image' => $imagepath . 'dark-noise.jpg',
-		'repeat' => 'repeat',
-		'position' => 'top left',
-		'attachment'=>'scroll' );
-
-	$background = of_get_option( 'banner_background', $background_defaults );
-	if ( $background ) {
-		$bkgrnd_color = apply_filters( 'of_sanitize_color', $background['color'] );
-		$output .= "#bannercontainer { ";
-		$output .= "background: " . $bkgrnd_color . " url('" . esc_url( $background['image'] ) . "') " . $background['repeat'] . " " . $background['attachment'] . " " . $background['position'] . ";";
-		$output .= " }";
-	}
-
-	$footerColour = apply_filters( 'of_sanitize_color', of_get_option( 'footer_color', '#222222' ) );
-	if ( !empty( $footerColour ) ) {
-		$output .= "\n#footercontainer { ";
-		$output .= "background-color: " . $footerColour . ";";
-		$output .= " }";
-	}
-
-	if ( of_get_option( 'footer_position', 'center' ) ) {
-		$output .= "\n.smallprint { ";
-		$output .= "text-align: " . sanitize_text_field( of_get_option( 'footer_position', 'center' ) ) . ";";
-		$output .= " }";
-	}
-
-	if ( $output != '' ) {
-		$output = "\n<style>\n" . $output . "\n</style>\n";
-		echo $output;
-	}
-}
-add_action( 'wp_head', 'tatva_theme_options_styles' );
 
 
 /**
