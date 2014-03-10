@@ -36,7 +36,7 @@
                             ?>
                             <?php if ($products->have_posts()) : $i = 1; ?>
                                     <?php while ($products->have_posts()) : $products->the_post(); ?>
-                                            <div class="col grid_4_of_12 home-product<?php if($i % 3 == 1) { echo ' last'; } ?>">
+                                            <div class="col grid_4_of_12 home-product">
                                                     <a href="<?php the_permalink(); ?>">
                                                             <h3 class="home-product-title"><?php the_title(); ?></h3>
                                                     </a>

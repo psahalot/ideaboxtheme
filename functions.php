@@ -7,6 +7,7 @@
  */
 
 require( get_stylesheet_directory() . '/inc/customizer.php' ); // new customizer options
+include( get_stylesheet_directory() . '/inc/edd-config.php' ); // EDD config file 
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -189,7 +190,7 @@ function tatva_class_names($classes) {
         }
         
         // check if right sidebar is active, if yes, return container wide body class
-        if(!is_front_page() && is_active_sidebar('sidebar-main') || is_page_template( 'page-templates/full-width.php' ) || is_page_template( 'page-templates/edd-store.php' )) { 
+        if(!is_front_page() && is_active_sidebar('sidebar-main') || is_page_template( 'page-templates/full-width.php' ) || is_page_template( 'page-templates/edd-store.php' ) || is_post_type_archive('download')) { 
             $classes[] = 'container-wide';
         }
  
@@ -226,7 +227,7 @@ function tatva_widgets_init() {
 	register_sidebar( array(
 			'name' => esc_html__( 'Shop Sidebar', 'tatva' ),
 			'id' => 'sidebar-shop',
-			'description' => esc_html__( 'Appears in the sidebar on EDD single products and archive pages only', 'tatva' ),
+			'description' => esc_html__( 'Appears in the sidebar on EDD single product pages only', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widget-title">',
@@ -858,6 +859,12 @@ add_filter( 'wp_nav_menu_objects', 'tatva_add_menu_parent_class' );
  * @since Tatva 1.0
  */
 add_filter( 'widget_text', 'do_shortcode' );
+
+/** 
+ * Additional settings for Easy Digital Downloads
+ * 
+ * @since Tatva 1.0
+ */
 
 
 /**

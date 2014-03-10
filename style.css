@@ -1611,7 +1611,11 @@ article.sticky {
    EDD Store Template
    ========================================================================== */
 
-.store-product:nth-of-type(3n+1) {
+.store-title {
+        margin-top: 0; 
+}
+
+.store-product:nth-of-type(3n+2) {
         margin-left: 0;
 }
 

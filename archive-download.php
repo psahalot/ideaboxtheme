@@ -1,9 +1,9 @@
 <?php
 /**
- * Template Name: Store
+ *
  * 
- * A custom template for setting up EDD store page and 
- * displaying products in grid format.
+ * A custom template for displaying EDD archive 
+ * grid format.
  * 
  */
 

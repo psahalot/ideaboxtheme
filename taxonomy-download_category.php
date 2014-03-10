@@ -1,9 +1,9 @@
 <?php
 /**
- * Template Name: Store
+ *
  * 
- * A custom template for setting up EDD store page and 
- * displaying products in grid format.
+ * A custom template for displaying EDD category archive 
+ * grid format.
  * 
  */
 
@@ -16,18 +16,6 @@ get_header(); ?>
                     <div class="col grid_12_of_12">
                         
                         <div class="main-content">
-                            <?php if ( get_theme_mod( 'tatva_edd_store_archives_title' ) || get_theme_mod( 'tatva_edd_store_archives_description' ) ) : ?>
-                            <div class="edd-store-info">
-                                <?php if ( get_theme_mod( 'tatva_edd_store_archives_title' ) ) : ?>
-					<h2 class="store-title"><?php echo get_theme_mod( 'tatva_edd_store_archives_title' ); ?></h2>
-				<?php endif; ?>
-				<?php if ( get_theme_mod( 'tatva_edd_store_archives_description' ) ) : ?>
-					<div class="store-description">
-						<?php echo wpautop( get_theme_mod( 'tatva_edd_store_archives_description' ) ); ?>
-					</div>
-				<?php endif; ?>
-                            </div> <!-- /.edd-store-info -->
-                            <?php endif; ?>
                             
 			<?php
                         
@@ -42,6 +30,13 @@ get_header(); ?>
 			$products = new WP_Query($product_args);
 			?>
 			<?php if ($products->have_posts()) : $i = 1; ?>
+                            <header class="archive-header">
+					<h1 class="archive-title"><?php printf( esc_html__( 'Product Category Archives: %s', 'tatva' ), '<span class="cat-archive">' . single_cat_title( '', false ) . '</span>' ); ?></h1>
+
+					<?php if ( category_description() ) { // Show an optional category description ?>
+						<div class="archive-meta"><?php echo category_description(); ?></div>
+					<?php } ?>
+				</header>
 				<?php while ($products->have_posts()) : $products->the_post(); ?>
 					<div class="col grid_4_of_12 store-product">
 						<a href="<?php the_permalink(); ?>">
