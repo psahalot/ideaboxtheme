@@ -190,29 +190,21 @@ add_filter( 'mce_css', 'tatva_mce_css' );
 // Add specific CSS class by filter
 add_filter('body_class','tatva_class_names');
 function tatva_class_names($classes) {
-	
-        if(is_front_page()) {
+    
+        if ( is_page_template( 'page-templates/front-page.php' )) {
             $classes[] = 'tatva-front-page';
         }
         
         // check if right sidebar is active, if yes, return container wide body class
-        if(!is_front_page() && is_active_sidebar('sidebar-main') ) { 
+        if(!is_front_page() && is_active_sidebar('sidebar-main') || is_page_template( 'page-templates/full-width.php' ) || is_page_template( 'page-templates/edd-store.php' )) { 
             $classes[] = 'container-wide';
         }
-        elseif (( is_home() || is_archive() ) && is_active_sidebar( 'sidebar-blog' )) {
-            $classes[] = 'container-wide-blog';
-        }
-        elseif ( is_single() && is_active_sidebar( 'sidebar-single' ) ) {
-            $classes[] = 'container-wide-single';
-        }
-        elseif ( !is_front_page() && is_page() && is_active_sidebar( 'sidebar-page' ) ) {
-            $classes[] = 'container-wide-page';
-        }
-        elseif (!is_front_page()) {
+ 
+        elseif (!is_front_page() || (is_home() && !is_active_sidebar('sidebar-main'))) {
             $classes[]= 'container-slim';
         }
         
-        if ( is_front_page() && !get_theme_mod( 'tatva_edd_front_featured_products' ) ){ 
+        if ( is_page_template( 'page-templates/front-page.php' ) && !get_theme_mod( 'tatva_edd_front_featured_products' ) ){ 
             $classes[]= 'no-featured-products'; 
         }
 	// return the $classes array
@@ -239,29 +231,9 @@ function tatva_widgets_init() {
 		) );
 
 	register_sidebar( array(
-			'name' => esc_html__( 'Blog Sidebar', 'tatva' ),
-			'id' => 'sidebar-blog',
-			'description' => esc_html__( 'Appears in the sidebar on the blog and archive pages only', 'tatva' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
-
-	register_sidebar( array(
-			'name' => esc_html__( 'Single Post Sidebar', 'tatva' ),
-			'id' => 'sidebar-single',
-			'description' => esc_html__( 'Appears in the sidebar on single posts only', 'tatva' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>'
-		) );
-
-	register_sidebar( array(
-			'name' => esc_html__( 'Page Sidebar', 'tatva' ),
-			'id' => 'sidebar-page',
-			'description' => esc_html__( 'Appears in the sidebar on pages only', 'tatva' ),
+			'name' => esc_html__( 'Shop Sidebar', 'tatva' ),
+			'id' => 'sidebar-shop',
+			'description' => esc_html__( 'Appears in the sidebar on EDD single products and archive pages only', 'tatva' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widget-title">',
