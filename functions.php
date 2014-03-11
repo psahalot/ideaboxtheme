@@ -9,6 +9,8 @@
 require( get_stylesheet_directory() . '/inc/customizer.php' ); // new customizer options
 include( get_stylesheet_directory() . '/inc/edd-config.php' ); // EDD config file 
 include( get_stylesheet_directory() . '/inc/widgets/image-widget/image-widget.php' ); // Image widget 
+include( get_stylesheet_directory() . '/inc/widgets/social-icons/simple-social-icons.php' ); // Social Icons widget 
+
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -238,21 +240,21 @@ function tatva_widgets_init() {
 	register_sidebar( array(
 			'name' => esc_html__( 'Home Featured Left', 'tatva' ),
 			'id' => 'home-featured1',
-			'description' => esc_html__( 'Appears in the banner area on the Front Page', 'tatva' ),
+			'description' => esc_html__( 'Appears in the featured area on the Front Page', 'tatva' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
-			'before_title' => '<h1 class="widget-title">',
-			'after_title' => '</h1>'
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</hh3>'
 		) );
 
 	register_sidebar( array(
 			'name' => esc_html__( 'Home Featured Right', 'tatva' ),
 			'id' => 'home-featured2',
-			'description' => esc_html__( 'Appears in the banner area on the Front Page', 'tatva' ),
+			'description' => esc_html__( 'Appears in the featured area on the Front Page', 'tatva' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
-			'before_title' => '<h1 class="widget-title">',
-			'after_title' => '</h1>'
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>'
 		) );
 
 	register_sidebar( array(

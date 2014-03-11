@@ -752,6 +752,7 @@ select {
         color: #fff;
         font-weight: 300;
         text-align: center;
+         text-transform: none; 
 }
 
 .home .banner .textwidget p {
@@ -765,6 +766,18 @@ select {
         padding: 1rem 0 0;
         letter-spacing: 1px;
         font-weight: 400;
+        font-family: "Montserrat", sans-serif; 
+}
+
+.home .banner .widget-title {
+        font-family: "Montserrat", sans-serfi;
+        font-size: 30px; 
+        font-size: 3rem;
+        text-align: center;
+        color: #fff;
+        text-transform: none;
+        font-weight: 400;
+        line-height: 1.6; 
 }
 
 .cta-button {
@@ -798,14 +811,6 @@ select {
         font-weight: 700;
         letter-spacing: 2px; 
 }
-.banner h1,
-.banner h2,
-.banner h3,
-.banner h4,
-.banner h5,
-.banner h6 {
-	color: #DA4545;
- }
 
 .banner h1 {
 	font-size: 56px;
@@ -838,6 +843,16 @@ select {
         font-size: 1.6rem; 
         font-weight: 300;
         letter-spacing: 1px; 
+}
+
+.home-sidebar .widget_sp_image,
+.home-sidebar .widget_sp_image p {
+        letter-spacing: 0; 
+        background: none; 
+}
+
+.home-sidebar .widget_sp_image .widget_title {
+        margin-top: 0;
 }
 
 .home-sidebar .widget p {
@@ -2440,6 +2455,56 @@ li span.dots {
 #menu-social li a[href*="linkedin.com"]::before {
         content: '\f0e1';
         color:   #0e76a8;
+}
+
+
+/* ==========================================================================
+   IdeaBox Social Icons
+   ========================================================================== */
+
+.ideabox-social-icons {
+	overflow: hidden;
+}
+
+.ideabox-social-icons ul {
+	margin: 0;
+	padding: 0;
+}
+
+.ideabox-social-icons ul li {
+	background: none !important;
+	border: none !important;
+	float: left;
+	list-style-type: none !important;
+	margin: 0 6px 12px !important;
+	padding: 0 !important;
+}
+
+.ideabox-social-icons ul li a {
+	border: none !important;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	display: inline-block;
+	font-family: 'FontAwesome';
+	font-style: normal !important;
+	font-variant: normal !important;
+	font-weight: normal !important;
+	line-height: 1em;
+	speak: none;
+	text-align: center;
+	text-decoration: none !important;
+	text-transform: none !important;
+	width: 1em;
+}
+
+.ideabox-social-icons ul.aligncenter {
+	text-align: center;
+}
+
+.ideabox-social-icons ul.aligncenter li {
+	display: inline-block;
+	float: none;
 }
 
 /* ==========================================================================

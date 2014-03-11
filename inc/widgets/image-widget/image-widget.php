@@ -37,8 +37,6 @@ class Tribe_Image_Widget extends WP_Widget {
 		}
 		add_action( 'admin_head-widgets.php', array( $this, 'admin_head' ) );
 
-		add_action( 'plugin_row_meta', array( $this, 'plugin_row_meta' ),10 ,2 );
-
 		
 	}
 
@@ -241,7 +239,7 @@ class Tribe_Image_Widget extends WP_Widget {
 				'class' => 	$this->widget_options['classname'].'-image-link',
 				'title' => ( !empty( $instance['alt'] ) ) ? $instance['alt'] : $instance['title'],
 			);
-			$attr = apply_filters('image_widget_link_attributes', $attr, $instance );
+            		$attr = apply_filters('image_widget_link_attributes', $attr, $instance );
 			$attr = array_map( 'esc_attr', $attr );
 			$output = '<a';
 			foreach ( $attr as $name => $value ) {
@@ -367,33 +365,4 @@ class Tribe_Image_Widget extends WP_Widget {
 		return apply_filters( 'sp_template_image-widget_'.$template, $file);
 	}
 
-
-	/**
-	 * Display a thank you nag when the plugin has been upgraded.
-	 */
-	public function post_upgrade_nag() {
-		if ( !current_user_can('install_plugins') ) return;
-
-		$version_key = '_image_widget_version';
-		if ( get_site_option( $version_key ) == self::VERSION ) return;
-
-		$msg = sprintf(__('Thanks for upgrading the Image Widget! If you like this plugin, please consider <a href="%s" target="_blank">rating it</a> and maybe even check out our premium plugins including our <a href="%s" target="_blank">Events Calendar Pro</a>!', 'image-widget'),'http://wordpress.org/extend/plugins/image-widget/?source=image-widget&pos=nag','http://tri.be/wordpress-events-calendar-pro/?source=image-widget&pos=nag');
-		echo "<div class='update-nag'>$msg</div>";
-
-		update_site_option( $version_key, self::VERSION );
-	}
-
-	/**
-	 * Display an informational section in the plugin admin ui.
-	 * @param $meta
-	 * @param $file
-	 *
-	 * @return array
-	 */
-	public function plugin_row_meta( $meta, $file ) {
-		if ( $file == plugin_basename( dirname(__FILE__).'/image-widget.php' ) ) {
-			$meta[] = '<span class="tribe-test">'.sprintf(__('Check out our other <a href="%s" target="_blank">plugins</a> including our <a href="%s" target="_blank">Events Calendar Pro</a>!', 'image-widget'),'http://tri.be/products/?source=image-widget&pos=pluginlist','http://tri.be/wordpress-events-calendar-pro/?source=image-widget&pos=pluginlist').'</span>';
-		}
-		return $meta;
-	}
 }

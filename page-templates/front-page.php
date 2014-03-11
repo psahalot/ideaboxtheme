@@ -49,7 +49,7 @@ get_header(); ?>
 					// Display the active banner sidebars
 					for ( $x=1; $x<=2; $x++ ) {
 						if ( is_active_sidebar( 'home-featured'. $x ) ) { ?>
-							<div class="col <?php echo $containerClass?>">
+							<div id="<?php echo 'home-featured'.$x; ?>" class="col <?php echo $containerClass?>">
 								<div class="widget-area" role="complementary">
 									<?php dynamic_sidebar( 'home-featured'. $x ); ?>
 								</div> <!-- /.widget-area -->

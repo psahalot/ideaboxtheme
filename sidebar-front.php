@@ -27,7 +27,7 @@
 			// Display the active front page sidebars
 			for ( $x=1; $x<=4; $x++ ) {
 				if ( is_active_sidebar( 'sidebar-homepage'.  $x ) ) { ?>
-					<div class="col <?php echo $containerClass?>">
+					<div id="<?php echo 'home-widget'.$x; ?>" class="col <?php echo $containerClass?>">
 						<div class="home-widgets" role="complementary">
 							<?php dynamic_sidebar( 'sidebar-homepage'.  $x ); ?>
 						</div> <!-- #widget-area -->

@@ -47,7 +47,7 @@ if ( !defined('ABSPATH') )
 				// Note: this is dumb. We shouldn't need to have to do this. There should really be a centralized function in core code for this.
 				$possible_sizes = apply_filters( 'image_size_names_choose', array(
 					'full'      => __('Full Size', 'image_widget'),
-					'thumbnail' => __('Thumbnail', 'image_widget'),
+					'post_feature_thumb' => __('Thumbnail', 'image_widget'),
 					'medium'    => __('Medium', 'image_widget'),
 					'large'     => __('Large', 'image_widget'),
 				) );
