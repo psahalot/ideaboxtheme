@@ -66,10 +66,12 @@ if ( ! function_exists( 'tatva_setup' ) ) {
                 // hard crop store front and taxonomy product images thumbnail for downloads
                 add_image_size( 'product-image-thumb', 370, 243, true );
 
+                // add support for widget customizer
+                add_theme_support( 'widget-customizer' );
+                
 		// This theme uses wp_nav_menu() in one location
 		register_nav_menus( array(
-				'primary' => esc_html__( 'Primary Menu', 'tatva' ),
-                                'social' => esc_html__('Social Menu', 'tatva')
+				'primary' => esc_html__( 'Primary Menu', 'tatva' )
 			) );
 
 		// This theme supports a variety of post formats
